@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #222;
+  line-height: 1.5;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.logo {
+  width: 90px;
+  margin-bottom: 0.5rem;
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.gallery {
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #fafafa;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 0.8rem 0 0.3rem;
+  font-size: 1.05rem;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  background: #f8f8f8;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.contact h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+.btn {
+  background: #25d366; /* cor do WhatsApp */
+  color: #fff;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  animation: pulse 2.8s infinite ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+/* Animação de pulsar suave no botão */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* --- Animação suave ao rolar --- */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.4rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card img {
+    height: 200px;
+  }
+}
