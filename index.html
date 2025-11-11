@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólios e Agendas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <img src="logo.png" alt="Logo da marca" class="logo">
+    <h1>Portfólios e Agendas Personalizadas</h1>
+    <p>Modelos sob encomenda, feitos com design exclusivo e acabamento premium.</p>
+  </header>
+
+  <section class="gallery">
+    <h2>Nossos Modelos</h2>
+    <div class="grid">
+      <div class="card fade">
+        <img src="img/agenda1.jpg" alt="Agenda modelo 1">
+        <h3>Agenda Minimalista</h3>
+        <p>Design clean e capa de tecido.</p>
+      </div>
+      <div class="card fade">
+        <img src="img/agenda2.jpg" alt="Agenda modelo 2">
+        <h3>Agenda Floral</h3>
+        <p>Capa artística e acabamento premium.</p>
+      </div>
+      <div class="card fade">
+        <img src="img/agenda3.jpg" alt="Agenda modelo 3">
+        <h3>Portfólio Executivo</h3>
+        <p>Ideal para uso profissional e reuniões.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact fade">
+    <h2>Solicite um Orçamento</h2>
+    <p>Entre em contato e peça um orçamento personalizado conforme o seu projeto.</p>
+    <a href="https://wa.me/seunumerowhatsapp" target="_blank" class="btn">Falar no WhatsApp</a>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 | Feito com carinho por [Sua Marca]</p>
+  </footer>
+
+  <script>
+    // Animação ao rolar (fade in)
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
