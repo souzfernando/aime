@@ -2,20 +2,48 @@
 // CART.JS
 // ============================
 
-// Atualiza o contador do carrinho no topo
+// 🔧 Limpa dados antigos que possam ter formato incorreto
+try {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho'));
+    if (Array.isArray(carrinho)) {
+        carrinho.forEach(item => {
+            if (typeof item.preco !== 'number') item.preco = Number(item.preco) || 0;
+            if (!item.imagem && item.img) item.imagem = item.img;
+        });
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    }
+} catch(e) {
+    localStorage.removeItem('carrinho');
+}
+
+// Atualiza o contador do carrinho no topo (desktop e mobile)
 function updateCartCount() {
     const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     const totalItens = carrinho.reduce((soma, item) => soma + (Number(item.quantidade) || 0), 0);
 
-    const badge = document.getElementById('cart-count');
-    if (badge) badge.textContent = totalItens;
+    // Desktop
+    const badgeDesk = document.getElementById('cart-count');
+    if (badgeDesk) badgeDesk.textContent = totalItens;
+
+    // Mobile
+    const badgeMobile = document.getElementById('cart-count-mobile');
+    if (badgeMobile) badgeMobile.textContent = totalItens;
+}
+
+// Garante que o contador atualize mesmo que o mobile seja carregado depois
+function tentarUpdateCartCount(repeticoes = 10, intervalo = 200) {
+    let cont = 0;
+    const loop = setInterval(() => {
+        updateCartCount();
+        cont++;
+        if (cont >= repeticoes) clearInterval(loop);
+    }, intervalo);
 }
 
 // Adiciona item ao carrinho recebendo um objeto
 function addToCart(item) {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-    // Procura pelo produto pelo id
     const existente = carrinho.find(i => i.id === item.id);
 
     if (existente) {
@@ -32,7 +60,7 @@ function addToCart(item) {
 
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
     updateCartCount();
-    carregarCarrinho(); // Atualiza tabela do carrinho se estiver na página
+    carregarCarrinho();
 }
 
 // Carrega o carrinho na página
@@ -41,7 +69,7 @@ function carregarCarrinho() {
     const subtotalEl = document.querySelector('#subtotal');
     const totalEl = document.querySelector('#total');
 
-    if (!tabela) return; // evita erro se não estiver na página do carrinho
+    if (!tabela) return;
 
     const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     tabela.innerHTML = '';
@@ -54,7 +82,7 @@ function carregarCarrinho() {
         tabela.innerHTML += `
             <tr>
                 <td class="align-middle"><img src="${item.imagem}" style="width:50px;"> ${item.nome}</td>
-                <td class="align-middle">R$ ${item.preco.toFixed(2)}</td>
+                <td class="align-middle">R$ ${(Number(item.preco) || 0).toFixed(2)}</td>
                 <td class="align-middle">
                     <div class="input-group quantity mx-auto" style="width:100px;">
                         <div class="input-group-btn">
@@ -66,7 +94,7 @@ function carregarCarrinho() {
                         </div>
                     </div>
                 </td>
-                <td class="align-middle">R$ ${subtotal.toFixed(2)}</td>
+                <td class="align-middle">R$ ${(subtotal || 0).toFixed(2)}</td>
                 <td class="align-middle">
                     <button class="btn btn-sm btn-danger" onclick="removerItem(${i})"><i class="fa fa-times"></i></button>
                 </td>
@@ -74,8 +102,8 @@ function carregarCarrinho() {
         `;
     });
 
-    subtotalEl.textContent = 'R$ ' + total.toFixed(2);
-    totalEl.textContent = 'R$ ' + total.toFixed(2);
+    if (subtotalEl) subtotalEl.textContent = 'R$ ' + total.toFixed(2);
+    if (totalEl) totalEl.textContent = 'R$ ' + total.toFixed(2);
 }
 
 // Altera quantidade
@@ -105,7 +133,7 @@ function finalizarCompra() {
         return;
     }
 
-    let mensagem = "🛍️ *Pedido de compra:*\n\n";
+    let mensagem = "*Pedido de compra:*\n\n";
     let total = 0;
 
     carrinho.forEach(item => {
@@ -114,10 +142,12 @@ function finalizarCompra() {
         mensagem += `• ${item.nome} (x${item.quantidade}) - R$ ${subtotal.toFixed(2)}\n`;
     });
 
-    mensagem += `\n💰 *Total:* R$ ${total.toFixed(2)}\n\nDesejo finalizar meu pedido.`;
+    mensagem += `\n*Total:* R$ ${total.toFixed(2)}\n\n`;
+    mensagem += "Desejo finalizar meu pedido.";
 
-    const numero = "5514998423336";
-    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    const textoFormatado = encodeURIComponent(mensagem).replace(/%0A/g, "%0D%0A");
+    const numero = "5514998423336"; 
+    const url = `https://wa.me/${numero}?text=${textoFormatado}`;
     window.open(url, '_blank');
 }
 
@@ -125,4 +155,8 @@ function finalizarCompra() {
 window.addEventListener('storage', updateCartCount);
 
 // Inicializa carrinho ao carregar a página
-document.addEventListener('DOMContentLoaded', carregarCarrinho);
+document.addEventListener('DOMContentLoaded', () => {
+    // Tenta atualizar várias vezes caso mobile ainda não exista
+    tentarUpdateCartCount();
+    carregarCarrinho();
+});

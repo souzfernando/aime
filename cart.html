@@ -21,6 +21,7 @@
 
     <!-- Bootstrap Template CSS -->
     <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
     <!-- Topo -->
@@ -91,18 +92,18 @@
     <script src="js/cart.js"></script>
 
     <script>
-    // Carrega o topo e depois inicializa o carrinho
-    fetch('topo.html')
-        .then(res => res.text())
-        .then(html => {
-            document.getElementById('topo').innerHTML = html;
+  // Carrega o topo e só depois inicializa o carrinho
+  fetch('topo.html')
+      .then(res => res.text())
+      .then(html => {
+          document.getElementById('topo').innerHTML = html;
+      })
+      .then(() => {
+          // Agora sim, quando o topo já foi carregado
+          if (typeof updateCartCount === 'function') updateCartCount();
+          if (typeof carregarCarrinho === 'function') carregarCarrinho();
+      });
+</script>
 
-            // Atualiza contador no topo após carregar
-            if (typeof updateCartCount === 'function') updateCartCount();
-
-            // Carrega produtos do carrinho na tabela
-            if (typeof carregarCarrinho === 'function') carregarCarrinho();
-        });
-    </script>
 </body>
 </html>
