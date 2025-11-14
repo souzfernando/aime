@@ -24,8 +24,9 @@
     <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Topo -->
-    <div id="topo"></div>
+    <!-- Head Start -->
+    <div id="head"></div>
+    <!-- Head End -->
 
     <!-- 🛒 Carrinho Dinâmico -->
     <div class="container-fluid">
@@ -65,44 +66,60 @@
                             <h5 id="total">R$ 0,00</h5>
                         </div>
                         <button onclick="finalizarCompra()" class="btn btn-block btn-primary font-weight-bold my-3 py-3">
-                            Finalizar Compra no WhatsApp
+                            <i class="fab fa-whatsapp"></i> Finalizar Compra no WhatsApp
                         </button>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="container-fluid bg-dark text-secondary mt-5 pt-5">
-        <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256,256,256,.1) !important;">
-            <div class="col-md-12 text-center">
-                <p class="mb-md-0 text-secondary">&copy; Seu Site - Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </div>
+    <!-- Footer Start -->
+    <div id="footer"></div>
+<!-- Footer End -->
 
-    <!-- JS Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<!-- Carrega o topo -->
+<script>
+    fetch('includes/head.html')
+    .then(res => res.text())
+    .then(html => {
+        const topoDiv = document.getElementById('head');
+        topoDiv.innerHTML = html;
 
-    <!-- JS do Carrinho -->
-    <script src="js/cart.js"></script>
+    // Atualiza o contador assim que o topo estiver no DOM
+        updateCartCount();
+    });
+</script>
 
-    <script>
+<!-- Carrega o Rodapé -->
+<script>
+    fetch("includes/footer.html")
+    .then(res => res.text())
+    .then(html => document.getElementById("footer").innerHTML = html);
+</script>
+
+<!-- JS Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- JS do Carrinho -->
+<script src="js/cart.js"></script>
+
+<script>
   // Carrega o topo e só depois inicializa o carrinho
   fetch('topo.html')
-      .then(res => res.text())
-      .then(html => {
-          document.getElementById('topo').innerHTML = html;
-      })
-      .then(() => {
+  .then(res => res.text())
+  .then(html => {
+      document.getElementById('topo').innerHTML = html;
+  })
+  .then(() => {
           // Agora sim, quando o topo já foi carregado
-          if (typeof updateCartCount === 'function') updateCartCount();
-          if (typeof carregarCarrinho === 'function') carregarCarrinho();
-      });
+      if (typeof updateCartCount === 'function') updateCartCount();
+      if (typeof carregarCarrinho === 'function') carregarCarrinho();
+  });
 </script>
 
 </body>

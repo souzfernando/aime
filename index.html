@@ -13,7 +13,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -28,1128 +28,552 @@
 </head>
 
 <body>
-    <div id="topo"></div>
-    
-<!-- Carousel Start -->
-<div class="container-fluid mb-3">
-    <div class="row px-xl-5">
-        <div class="col-lg-8">
-            <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#header-carousel" data-slide-to="1"></li>
-                    <li data-target="#header-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item position-relative active" style="height: 430px;">
-                        <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg" style="object-fit: cover;">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 700px;">
-                                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Cadernetas de Saúde</h1>
-                                <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Cadernetas de saúde personalizadas e restaurações com qualidade. Criamos novos modelos ou recuperamos os antigos, mantendo suas informações organizadas e bem apresentadas.</p>
-                                <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Orçamento</a>
+
+    <!-- Head Start -->
+    <div id="head"></div>
+    <!-- Head End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid mb-3">
+        <div class="row px-xl-5">
+            <div class="col-lg-8">
+                <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#header-carousel" data-slide-to="1"></li>
+                        <li data-target="#header-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item position-relative active" style="height: 430px;">
+                            <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg"
+                            style="object-fit: cover;">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">
+                                    Cadernetas de Saúde</h1>
+                                    <!--<p class="mx-md-5 px-5 animate__animated animate__bounceIn">Cadernetas de saúde personalizadas e restaurações com qualidade. Criamos novos modelos ou recuperamos os antigos, mantendo suas informações organizadas e bem apresentadas.</p>-->
+                                    <a class="btn-cartoon mt-3 animate__animated animate__fadeInUp"
+                                    href="#">Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item position-relative" style="height: 430px;">
+                            <img class="position-absolute w-100 h-100" src="img/bg-verde.jpg"
+                            style="object-fit: cover;">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Agendas
+                                    Personalizadas</h1>
+                                    <!--<p class="mx-md-5 px-5 animate__animated animate__bounceIn">Agendas personalizadas feitas com cuidado e qualidade. Produzimos modelos sob medida para seu estilo ou marca, ideais para organizar compromissos e destacar sua identidade no dia a dia.</p>-->
+                                    <a class="btn-cartoon mt-3 animate__animated animate__fadeInUp"
+                                    href="#agenda">Conheça</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item position-relative" style="height: 430px;">
+                            <img class="position-absolute w-100 h-100" src="img/bg-verde.jpg"
+                            style="object-fit: cover;">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Cadernos
+                                    Personalizados</h1>
+                                    <!--<p class="mx-md-5 px-5 animate__animated animate__bounceIn">Cadernos personalizados feitos especialmente para você. Modelos únicos, criados com qualidade e atenção aos detalhes, perfeitos para anotações, estudos ou presentes cheios de personalidade.</p>-->
+                                    <a class="btn-cartoon mt-3 animate__animated animate__fadeInUp"
+                                    href="#">Orçamento</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item position-relative" style="height: 430px;">
-                        <img class="position-absolute w-100 h-100" src="img/carousel-2.jpg" style="object-fit: cover;">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 700px;">
-                                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Agendas Personalizadas</h1>
-                                <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Agendas personalizadas feitas com cuidado e qualidade. Produzimos modelos sob medida para seu estilo ou marca, ideais para organizar compromissos e destacar sua identidade no dia a dia.</p>
-                                <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#agenda">Conheça</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item position-relative" style="height: 430px;">
-                        <img class="position-absolute w-100 h-100" src="img/carousel-3.jpg" style="object-fit: cover;">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 700px;">
-                                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Cadernos Personalizados</h1>
-                                <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Cadernos personalizados feitos especialmente para você. Modelos únicos, criados com qualidade e atenção aos detalhes, perfeitos para anotações, estudos ou presentes cheios de personalidade.</p>
-                                <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Orçamento</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="product-offer mb-30" style="height: 200px;">
-                <img class="img-fluid" src="img/offer-1.jpg" alt="">
-                <div class="offer-text">
-                    <h6 class="text-white text-uppercase">Save 20%</h6>
-                    <h3 class="text-white mb-3">Special Offer</h3>
-                    <a href="" class="btn btn-primary">Shop Now</a>
-                </div>
-            </div>
-            <div class="product-offer mb-30" style="height: 200px;">
-                <img class="img-fluid" src="img/offer-2.jpg" alt="">
-                <div class="offer-text">
-                    <h6 class="text-white text-uppercase">Save 20%</h6>
-                    <h3 class="text-white mb-3">Special Offer</h3>
-                    <a href="" class="btn btn-primary">Shop Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Carousel End -->
-
-
-<!-- Featured Start -->
-<div class="container-fluid pt-5">
-    <div class="row px-xl-5 pb-3">
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
-                <h1 class="fa fa-check text-primary-ico m-0 mr-3"></h1>
-                <h5 class="font-weight-semi-bold m-0">Quality Paixão</h5>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
-                <h1 class="fa fa-shipping-fast text-primary-ico m-0 mr-2"></h1>
-                <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
-                <h1 class="fas fa-exchange-alt text-primary-ico m-0 mr-3"></h1>
-                <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-            <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
-                <h1 class="fa fa-phone-volume text-primary-ico m-0 mr-3"></h1>
-                <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Featured End -->
-
-
-<!-- Categorias Start ->
-<div class="container-fluid pt-5">
-    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Categories</span></h2>
-    <div class="row px-xl-5 pb-3">
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
+            <div class="col-lg-4">
+                <div class="product-offer mb-30" style="height: 200px;">
+                    <img class="img-fluid" src="img/bg-verde.jpg" alt="">
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <a href="" class="btn-cartoon mt-3 animate__animated animate__fadeInUp">Shop Now</a>
                     </div>
                 </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="img/cat-4.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="img/cat-4.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="img/cat-4.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item img-zoom d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
-<!- Categories End -->
-
-
-<!-- Produtos Start -->
-<div class="container-fluid pt-5 pb-3">
-    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Nossos Produtos</span></h2>
-    <div class="row px-xl-5">
-
-
-        <!-- Inicio Produto 1-->
-        <section id="agenda"></section>
-            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-              <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                  <img class="img-fluid w-100" src="img/product-1.jpg" alt="Agenda Personalizada">
-              </div>
-            
-              <div class="text-center py-4">
-                  <a class="h6 text-decoration-none text-truncate" href="">Agenda Personalizada</a>
-                  <p class="text-muted small mb-2">
-                    Capa dura personalizada com nome, ano e tema de sua escolha.
-                </p>
-
-                <div class="d-flex align-items-center justify-content-center mt-2">
-                    <h5>R$90,00</h5>
-                </div>
-
-                <div class="d-flex align-items-center justify-content-center mb-1">
-                    <small class="fa fa-star text-primary mr-1"></small>
-                    <small class="fa fa-star text-primary mr-1"></small>
-                    <small class="fa fa-star text-primary mr-1"></small>
-                    <small class="fa fa-star text-primary mr-1"></small>
-                    <small class="fa fa-star text-primary mr-1"></small>
-                    <small>(99)</small>
-                </div>
-
-                <!-- ✅ Botão Ver Modelos -->
-                <button 
-                class="btn btn-dark mt-3 px-4 py-2"
-                onclick="abrirModalModelos('agenda-1', 'Agenda Personalizada', 90.00, 'img/product-1.jpg')">
-                <i class="fa fa-eye mr-2"></i> Ver modelos
-            </button>
-        </div>
-    </div>
-</div>
-<!-- Fim Produto 1 -->
-
-
-
-<!-- Início Produto 2 -->
-<div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-  <div class="product-item bg-light mb-4">
-    <div class="product-img position-relative overflow-hidden">
-      <img class="img-fluid w-100" src="img/product-2.jpg" alt="Caderneta Personalizada">
-  </div>
-
-  <div class="text-center py-4">
-      <a class="h6 text-decoration-none text-truncate" href="">Caderneta Personalizada</a>
-      <p class="text-muted small mb-2">
-        Capa dura personalizada com nome, ano e tema de sua escolha.
-    </p>
-
-    <div class="d-flex align-items-center justify-content-center mt-2">
-        <h5>R$80,00</h5>
-    </div>
-
-    <div class="d-flex align-items-center justify-content-center mb-1">
-        <small class="fa fa-star text-primary mr-1"></small>
-        <small class="fa fa-star text-primary mr-1"></small>
-        <small class="fa fa-star text-primary mr-1"></small>
-        <small class="fa fa-star text-primary mr-1"></small>
-        <small class="fa fa-star text-primary mr-1"></small>
-        <small>(99)</small>
-    </div>
-
-    <!-- ✅ Botão Adicionar ao Carrinho -->
-    <button 
-    class="btn btn-success mt-3 px-4 py-2"
-    onclick="addToCart({ 
-      id: 'caderneta-1', 
-      nome: 'Caderneta Personalizada', 
-      preco: 80.00, 
-      img: 'img/product-2.jpg' 
-  })">
-  <i class="fa fa-shopping-cart mr-2"></i> Adicionar ao carrinho
-</button>
-</div>
-</div>
-</div>
-<!-- Fim Produto 2 -->
-
-
-
-<div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-    <div class="product-item bg-light mb-4">
-        <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
-            <div class="product-action">
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-        </div>
-        <div class="text-center py-4">
-            <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-                <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-            </div>
-            <div class="d-flex align-items-center justify-content-center mb-1">
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                <small class="far fa-star text-primary mr-1"></small>
-                <small>(99)</small>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-    <div class="product-item bg-light mb-4">
-        <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
-            <div class="product-action">
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-        </div>
-        <div class="text-center py-4">
-            <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-                <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-            </div>
-            <div class="d-flex align-items-center justify-content-center mb-1">
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="far fa-star text-primary mr-1"></small>
-                <small class="far fa-star text-primary mr-1"></small>
-                <small>(99)</small>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-    <div class="product-item bg-light mb-4">
-        <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
-            <div class="product-action">
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-        </div>
-        <div class="text-center py-4">
-            <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-                <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-            </div>
-            <div class="d-flex align-items-center justify-content-center mb-1">
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small>(99)</small>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-    <div class="product-item bg-light mb-4">
-        <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
-            <div class="product-action">
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-        </div>
-        <div class="text-center py-4">
-            <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-                <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-            </div>
-            <div class="d-flex align-items-center justify-content-center mb-1">
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                <small>(99)</small>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-    <div class="product-item bg-light mb-4">
-        <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
-            <div class="product-action">
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-        </div>
-        <div class="text-center py-4">
-            <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-                <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-            </div>
-            <div class="d-flex align-items-center justify-content-center mb-1">
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                <small class="far fa-star text-primary mr-1"></small>
-                <small>(99)</small>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-    <div class="product-item bg-light mb-4">
-        <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
-            <div class="product-action">
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-        </div>
-        <div class="text-center py-4">
-            <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-                <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-            </div>
-            <div class="d-flex align-items-center justify-content-center mb-1">
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="fa fa-star text-primary mr-1"></small>
-                <small class="far fa-star text-primary mr-1"></small>
-                <small class="far fa-star text-primary mr-1"></small>
-                <small>(99)</small>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-<!-- Products End -->
-
-
-<!-- Offer Start -->
-<div class="container-fluid pt-5 pb-3">
-    <div class="row px-xl-5">
-        <div class="col-md-6">
-            <div class="product-offer mb-30" style="height: 300px;">
-                <img class="img-fluid" src="img/offer-1.jpg" alt="">
-                <div class="offer-text">
-                    <h6 class="text-white text-uppercase">Save 20%</h6>
-                    <h3 class="text-white mb-3">Special Offer</h3>
-                    <a href="" class="btn btn-primary">Shop Now</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="product-offer mb-30" style="height: 300px;">
-                <img class="img-fluid" src="img/offer-2.jpg" alt="">
-                <div class="offer-text">
-                    <h6 class="text-white text-uppercase">Save 20%</h6>
-                    <h3 class="text-white mb-3">Special Offer</h3>
-                    <a href="" class="btn btn-primary">Shop Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Offer End -->
-
-
-<!-- Products Start -->
-<div class="container-fluid pt-5 pb-3">
-    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Recent Products</span></h2>
-    <div class="row px-xl-5">
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/product-1.jpg" alt="">
-                    <div class="product-action">
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mb-1">
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small>(99)</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/product-2.jpg" alt="">
-                    <div class="product-action">
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mb-1">
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                        <small>(99)</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/product-3.jpg" alt="">
-                    <div class="product-action">
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mb-1">
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                        <small class="far fa-star text-primary mr-1"></small>
-                        <small>(99)</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/product-4.jpg" alt="">
-                    <div class="product-action">
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mb-1">
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="far fa-star text-primary mr-1"></small>
-                        <small class="far fa-star text-primary mr-1"></small>
-                        <small>(99)</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/product-5.jpg" alt="">
-                    <div class="product-action">
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mb-1">
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small>(99)</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/product-6.jpg" alt="">
-                    <div class="product-action">
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mb-1">
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                        <small>(99)</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/product-7.jpg" alt="">
-                    <div class="product-action">
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mb-1">
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star-half-alt text-primary mr-1"></small>
-                        <small class="far fa-star text-primary mr-1"></small>
-                        <small>(99)</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <div class="product-item bg-light mb-4">
-                <div class="product-img position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="img/product-8.jpg" alt="">
-                    <div class="product-action">
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                        <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-                    </div>
-                </div>
-                <div class="text-center py-4">
-                    <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
-                    <div class="d-flex align-items-center justify-content-center mt-2">
-                        <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center mb-1">
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="fa fa-star text-primary mr-1"></small>
-                        <small class="far fa-star text-primary mr-1"></small>
-                        <small class="far fa-star text-primary mr-1"></small>
-                        <small>(99)</small>
+                <div class="product-offer mb-30" style="height: 200px;">
+                    <img class="img-fluid" src="img/bg-verde.jpg" alt="">
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <a href="" class="btn-cartoon mt-3 animate__animated animate__fadeInUp">Shop Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Products End -->
+    <!-- Carousel End -->
 
 
-<!-- Vendor Start -->
-<div class="container-fluid py-5">
-    <div class="row px-xl-5">
-        <div class="col">
-            <div class="owl-carousel vendor-carousel">
-                <div class="bg-light p-4">
-                    <img src="img/vendor-1.jpg" alt="">
+    <!-- Featured Start -->
+    <div class="container-fluid pt-5">
+        <div class="row px-xl-5 pb-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-check text-primary-ico m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Quality</h5>
                 </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-2.jpg" alt="">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-shipping-fast text-primary-ico m-0 mr-2"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
                 </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-3.jpg" alt="">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                    <h1 class="fas fa-exchange-alt text-primary-ico m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
                 </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-4.jpg" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-5.jpg" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-6.jpg" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-7.jpg" alt="">
-                </div>
-                <div class="bg-light p-4">
-                    <img src="img/vendor-8.jpg" alt="">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-phone-volume text-primary-ico m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Vendor End -->
+    <!-- Featured End -->
 
+    <!-- Produtos Start -->
+    <div id="products-container"></div>
+    <!-- Produtos End -->
 
-<!-- Footer Start -->
-<div class="container-fluid bg-dark text-secondary mt-5 pt-5">
-    <div class="row px-xl-5 pt-5">
-        <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
-            <h5 class="text-secondary text-uppercase mb-4">Get In Touch</h5>
-            <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor. Rebum tempor no vero est magna amet no</p>
-            <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
-            <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@example.com</p>
-            <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890</p>
-        </div>
-        <div class="col-lg-8 col-md-12">
-            <div class="row">
-                <div class="col-md-4 mb-5">
-                    <h5 class="text-secondary text-uppercase mb-4">Quick Shop</h5>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                        <a class="text-secondary" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+    <!-- Offer Start -->
+    <div class="container-fluid pt-5 pb-3">
+        <div class="row px-xl-5">
+            <div class="col-md-6">
+                <div class="product-offer mb-30" style="height: 300px;">
+                    <img class="img-fluid" src="img/offer-1.jpg" alt="">
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <a href="" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
-                <div class="col-md-4 mb-5">
-                    <h5 class="text-secondary text-uppercase mb-4">My Account</h5>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
-                        <a class="text-secondary mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
-                        <a class="text-secondary" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <h5 class="text-secondary text-uppercase mb-4">Newsletter</h5>
-                    <p>Duo stet tempor ipsum sit amet magna ipsum tempor est</p>
-                    <form action="">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Your Email Address">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary">Sign Up</button>
-                            </div>
-                        </div>
-                    </form>
-                    <h6 class="text-secondary text-uppercase mt-4 mb-3">Follow Us</h6>
-                    <div class="d-flex">
-                        <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="col-md-6">
+                <div class="product-offer mb-30" style="height: 300px;">
+                    <img class="img-fluid" src="img/offer-2.jpg" alt="">
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <a href="" class="btn btn-primary">Shop Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <div class="col-md-6 px-xl-0">
-            <p class="mb-md-0 text-center text-md-left text-secondary">
-                &copy; <a class="text-primary" href="#">Aimê</a>. All Rights Reserved. 
-                <!--/*** The author’s attribution link must remain intact in the template. ***/-->
-                <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                Designed by <a class="text-primary" href="https://htmlcodex.com">Fernando Souza</a>
-            </p>
+    <!-- Offer End -->
+
+    <!-- Vendor Start -->
+    <div class="container-fluid py-5">
+        <div class="row px-xl-5">
+            <div class="col">
+                <div class="owl-carousel vendor-carousel">
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-1.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-2.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-3.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-4.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-5.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-6.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-7.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-8.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 px-xl-0 text-center text-md-right">
-            <img class="img-fluid" src="img/payments.png" alt="">
+    </div>
+    <!-- Vendor End -->
+
+
+    <!-- Footer Start -->
+    <div id="footer"></div>
+    <!-- Footer End -->
+
+    <!-- Back to Top 
+<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>-->
+
+
+<!-- SIDECART - Carrinho Lateral -->
+<div id="sidecart-overlay"></div>
+<div id="sidecart">
+    <div class="sidecart-header">
+        <h3>Meu Carrinho</h3>
+        <button onclick="fecharSidecart()">✖</button>
+    </div>
+
+    <div id="sidecart-items"></div>
+
+    <div class="sidecart-footer">
+        <button class="btn btn-block btn-primary font-weight-bold my-3 py-3" onclick="finalizarCompra()"><i
+            class="fab fa-whatsapp"></i> Finalizar Compra no WhatsApp</button>
         </div>
     </div>
-</div>
-<!-- Footer End -->
 
-<a href="https://wa.me/5599999999999" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-</a>
-
-<!-- Back to Top -->
-<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-
-<!-- Template Javascript -->
-<script src="js/main.js"></script>
-
-
-<script>
-  const input = document.getElementById('busca');
-  const form = document.getElementById('formBusca');
-  const btn = document.getElementById('btnBusca');
-
-  // Função para remover acentos
-  function removerAcentos(str) {
-      return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  }
-
-  function buscarTexto() {
-      const termo = removerAcentos(input.value.trim().toLowerCase());
-      if (!termo) return;
-
-      const elementos = document.querySelectorAll('body *');
-      let encontrado = false;
-
-      for (let el of elementos) {
-          if (!el.textContent || el.offsetParent === null) continue;
-
-          const texto = removerAcentos(el.textContent.toLowerCase());
-          if (texto.includes(termo)) {
-              encontrado = true;
-              el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              const originalBg = el.style.backgroundColor;
-              el.style.backgroundColor = '#b3f3f0';
-              setTimeout(() => el.style.backgroundColor = originalBg, 1500);
-              break;
-          }
-      }
-
-      if (!encontrado) {
-          alert('Texto não encontrado na página.');
-      }
-  }
-
-  // Enter no input
-  form.addEventListener('submit', buscarTexto);
-
-  // Clique no ícone
-  btn.addEventListener('click', buscarTexto);
-</script>
-
-<!-- JS do carrinho -->
-<script src="js/cart.js"></script>
-
-<!-- Carrega o topo -->
-<script>
-    fetch('topo.html')
-    .then(res => res.text())
-    .then(html => {
-        const topoDiv = document.getElementById('topo');
-        topoDiv.innerHTML = html;
-
-    // Atualiza o contador assim que o topo estiver no DOM
-        updateCartCount();
-    });
-</script>
-
-<!-- MODAL -->
-
-<!-- Modal de modelos -->
-<div id="modalModelos" class="modal" style="display:none;">
-  <div class="modal-content">
-    <span class="close" onclick="fecharModalModelos()">&times;</span>
-    <h5>Escolha o modelo do miolo:</h5>
-    <!-- MODELO 1 -->
-    <div class="modelos-grid">
-      <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas')">
-          <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas">
-          <p>Carisma com Horas</p>
-      </div>
-      <!-- MODELO  -->
-      <div class="modelo-item" onclick="abrirGaleria('planner')">
-        <img src="img/miolo/planner/1.jpg" alt="Planner">
-        <p>Planner</p>
+    <div id="cart-tab" class="cart-tab">
+        <i class="fa fa-shopping-cart"></i>
     </div>
-    <!-- MODELO 3 -->
-    <div class="modelo-item" onclick="abrirGaleria('semanal')">
-        <img src="img/miolo/semanal/1.jpg" alt="Semanal">
-        <p>Semanal</p>
+
+    <!-- MODAL MIOLO-->
+    <!-- Modal de modelos -->
+    <div id="modalModelos" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModalModelos()">&times;</span>
+            <h5>Escolha o modelo do miolo:</h5>
+            <!-- MODELO 1 -->
+            <div class="modelos-grid">
+                <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas')">
+                    <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas">
+                    <p>Carisma com Horas</p>
+                </div>
+                <!-- MODELO  -->
+                <div class="modelo-item" onclick="abrirGaleria('planner')">
+                    <img src="img/miolo/planner/1.jpg" alt="Planner">
+                    <p>Planner</p>
+                </div>
+                <!-- MODELO 3 -->
+                <div class="modelo-item" onclick="abrirGaleria('semanal')">
+                    <img src="img/miolo/semanal/1.jpg" alt="Semanal">
+                    <p>Semanal</p>
+                </div>
+                <!-- MODELO 4 -->
+                <div class="modelo-item" onclick="abrirGaleria('semanal')">
+                    <img src="img/miolo/semanal/1.jpg" alt="Semanal">
+                    <p>Semanal</p>
+                </div>
+                <!-- MODELO 5 -->
+                <div class="modelo-item" onclick="abrirGaleria('semanal')">
+                    <img src="img/miolo/semanal/1.jpg" alt="Semanal">
+                    <p>Semanal</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- MODELO 4 -->
-    <div class="modelo-item" onclick="abrirGaleria('semanal')">
-        <img src="img/miolo/semanal/1.jpg" alt="Semanal">
-        <p>Semanal</p>
+
+    <!-- Galeria -->
+    <div id="galeriaMiolo" class="galeria-overlay" style="display:none;">
+        <span class="close" onclick="fecharGaleria()">&times;</span>
+        <div class="galeria-container">
+            <button class="prev" onclick="mudarImagem(-1)">&#10094;</button>
+            <img id="galeriaImagem" src="" alt="Galeria Miolo">
+            <button class="next" onclick="mudarImagem(1)">&#10095;</button>
+            <button class="escolher-btn" onclick="escolherModeloAtual()"><i
+                class="fa fa-shopping-cart mr-2"></i>Escolher este modelo</button>
+            </div>
+        </div>
+        <div id="toast" style="
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #222;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        display: none;
+        z-index: 999999;
+        font-size: 14px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        ">
+        Produto adicionado ao carrinho!
     </div>
-    <!-- MODELO 5 -->
-    <div class="modelo-item" onclick="abrirGaleria('semanal')">
-        <img src="img/miolo/semanal/1.jpg" alt="Semanal">
-        <p>Semanal</p>
-    </div>
-</div>
-</div>
-</div>
-
-<!-- Galeria -->
-<div id="galeriaMiolo" class="galeria-overlay" style="display:none;">
-  <span class="close" onclick="fecharGaleria()">&times;</span>
-  <div class="galeria-container">
-    <button class="prev" onclick="mudarImagem(-1)">&#10094;</button>
-    <img id="galeriaImagem" src="" alt="Galeria Miolo">
-    <button class="next" onclick="mudarImagem(1)">&#10095;</button>
-    <button class="escolher-btn" onclick="escolherModeloAtual()">Escolher este modelo</button>
-</div>
-</div>
-
-<div id="toast" style="
-position: fixed;
-bottom: 20px;
-left: 50%;
-transform: translateX(-50%);
-background: #222;
-color: #fff;
-padding: 10px 20px;
-border-radius: 8px;
-display: none;
-z-index: 999999;
-font-size: 14px;
-box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-">
-Produto adicionado ao carrinho!
-</div>
 
 
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
 
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 
-<script>
-    let produtoAtual = {};
-    let imagensAtuais = [];
-    let indiceAtual = 0;
-    let modeloAtual = '';
-    let startX = 0;
+    <!-- Carrega o topo -->
+    <script>
+        fetch('includes/head.html')
+        .then(res => res.text())
+        .then(html => {
+            const topoDiv = document.getElementById('head');
+            topoDiv.innerHTML = html;
 
-// 🟩 Abre o modal dos modelos
-    function abrirModalModelos(id, nome, preco, img) {
-      produtoAtual = { id, nome, preco, img };
-      document.getElementById('modalModelos').style.display = 'flex';
-  }
+                // Atualiza o contador assim que o topo estiver no DOM
+            updateCartCount();
+        });
+    </script>
 
-// 🟥 Fecha o modal dos modelos
-  function fecharModalModelos() {
-      document.getElementById('modalModelos').style.display = 'none';
-  }
+    <!-- Carrega o Rodapé -->
+    <script>
+        fetch("includes/footer.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
 
-// 🟦 Abre a galeria do modelo (agora com dois parâmetros!)
-  function abrirGaleria(pasta, nomeModelo) {
-  modeloAtual = nomeModelo; // nome bonito pro carrinho
-  imagensAtuais = [];
-
-  // Carrega imagens automaticamente da pasta
-  for (let i = 1; i <= 8; i++) {
-    imagensAtuais.push(`img/miolo/${pasta}/${i}.jpg`);
-}
-
-indiceAtual = 0;
-mostrarImagem();
-fecharModalModelos();
-document.body.classList.add('no-scroll');
-document.getElementById('galeriaMiolo').style.display = 'flex';
-}
-
-// 🖼️ Mostra imagem atual
-function mostrarImagem() {
-  const img = document.getElementById('galeriaImagem');
-  img.src = imagensAtuais[indiceAtual];
-}
-
-// ⬅️➡️ Muda de imagem
-function mudarImagem(direcao) {
-  indiceAtual += direcao;
-  if (indiceAtual < 0) indiceAtual = imagensAtuais.length - 1;
-  if (indiceAtual >= imagensAtuais.length) indiceAtual = 0;
-  mostrarImagem();
-}
-
-// ❌ Fecha a galeria
-function fecharGaleria() {
-  document.getElementById('galeriaMiolo').style.display = 'none';
-  document.body.classList.remove('no-scroll');
-}
-
-// 🛒 Escolher modelo atual e adicionar ao carrinho
-function escolherModeloAtual() {
-  addToCart({
-    id: produtoAtual.id + '-' + modeloAtual.replace(/\s+/g, '-').toLowerCase(),
-    nome: produtoAtual.nome + ' - ' + modeloAtual,
-    preco: produtoAtual.preco,
-    img: imagensAtuais[0]
-});
-  fecharGaleria();
-  mostrarToast('Produto adicionado ao carrinho!');
-}
-
-// ✅ Toast de confirmação
-function mostrarToast(msg) {
-  const toast = document.getElementById('toast');
-  toast.innerText = msg;
-  toast.style.display = 'block';
-  setTimeout(() => toast.style.display = 'none', 2000);
-}
-
-// 📱 Suporte a swipe no mobile
-const galeria = document.getElementById('galeriaMiolo');
-if (galeria) {
-  galeria.addEventListener('touchstart', (e) => startX = e.touches[0].clientX);
-  galeria.addEventListener('touchend', (e) => {
-    let diff = e.changedTouches[0].clientX - startX;
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) mudarImagem(-1);
-      else mudarImagem(1);
-  }
-});
-}
-</script>
+    <!-- Carrega os Produtos -->
+    <script>
+        fetch('includes/products.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('products-container').innerHTML = data;
+        })
+        .catch(error => console.error('Erro ao carregar produtos:', error));
+    </script>
 
 
+    <!-- Barra de Busca -->
+    <script>
+        const input = document.getElementById('busca');
+        const form = document.getElementById('formBusca');
+        const btn = document.getElementById('btnBusca');
 
+        // Função para remover acentos
+        function removerAcentos(str) {
+            return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
+        function buscarTexto() {
+            const termo = removerAcentos(input.value.trim().toLowerCase());
+            if (!termo) return;
+
+            const elementos = document.querySelectorAll('body *');
+            let encontrado = false;
+
+            for (let el of elementos) {
+                if (!el.textContent || el.offsetParent === null) continue;
+
+                const texto = removerAcentos(el.textContent.toLowerCase());
+                if (texto.includes(termo)) {
+                    encontrado = true;
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    const originalBg = el.style.backgroundColor;
+                    el.style.backgroundColor = '#b3f3f0';
+                    setTimeout(() => el.style.backgroundColor = originalBg, 1500);
+                    break;
+                }
+            }
+
+            if (!encontrado) {
+                alert('Texto não encontrado na página.');
+            }
+        }
+
+        // Enter no input
+        form.addEventListener('submit', buscarTexto);
+
+        // Clique no ícone
+        btn.addEventListener('click', buscarTexto);
+    </script>
+
+    <!-- JS do carrinho -->
+    <script src="js/cart.js"></script>
+
+    <!-- MODAL MIOLO -->
+    <script>
+        let produtoAtual = {};
+        let imagensAtuais = [];
+        let indiceAtual = 0;
+        let modeloAtual = '';
+        let startX = 0;
+
+        // 🟩 Abre o modal dos modelos
+        function abrirModalModelos(id, nome, preco, img) {
+            produtoAtual = { id, nome, preco, img };
+            document.getElementById('modalModelos').style.display = 'flex';
+        }
+
+        // 🟥 Fecha o modal dos modelos
+        function fecharModalModelos() {
+            document.getElementById('modalModelos').style.display = 'none';
+        }
+
+        // 🟦 Abre a galeria do modelo
+        function abrirGaleria(pasta, nomeModelo) {
+            modeloAtual = nomeModelo;
+            imagensAtuais = [];
+
+            for (let i = 1; i <= 8; i++) {
+                imagensAtuais.push(`img/miolo/${pasta}/${i}.jpg`);
+            }
+
+            indiceAtual = 0;
+            mostrarImagem();
+            fecharModalModelos();
+
+            document.body.classList.add('no-scroll');
+            document.getElementById('galeriaMiolo').style.display = 'flex';
+        }
+
+        // 🖼️ Mostra imagem atual
+        function mostrarImagem() {
+            const img = document.getElementById('galeriaImagem');
+            img.src = imagensAtuais[indiceAtual];
+        }
+
+        // ⬅️➡️ Muda de imagem
+        function mudarImagem(direcao) {
+            indiceAtual += direcao;
+            if (indiceAtual < 0) indiceAtual = imagensAtuais.length - 1;
+            if (indiceAtual >= imagensAtuais.length) indiceAtual = 0;
+            mostrarImagem();
+        }
+
+        // ❌ Fecha a galeria
+        function fecharGaleria() {
+            document.getElementById('galeriaMiolo').style.display = 'none';
+            document.body.classList.remove('no-scroll');
+        }
+
+        // 🛒 Escolher modelo atual e adicionar ao carrinho
+        function escolherModeloAtual() {
+            addToCart({
+                id: produtoAtual.id + '-' + modeloAtual.replace(/\s+/g, '-').toLowerCase(),
+                nome: produtoAtual.nome + ' - ' + modeloAtual,
+                preco: produtoAtual.preco,
+                img: imagensAtuais[0]
+            });
+            fecharGaleria();
+            mostrarToast('Produto adicionado ao carrinho!');
+        }
+
+        // ✅ Toast
+        function mostrarToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.innerText = msg;
+            toast.style.display = 'block';
+            setTimeout(() => toast.style.display = 'none', 2000);
+        }
+
+        // 📱 Swipe no mobile
+        const galeria = document.getElementById('galeriaMiolo');
+        if (galeria) {
+            galeria.addEventListener('touchstart', (e) => startX = e.touches[0].clientX);
+            galeria.addEventListener('touchend', (e) => {
+                let diff = e.changedTouches[0].clientX - startX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) mudarImagem(-1);
+                    else mudarImagem(1);
+                }
+            });
+        }
+
+        // ⌨️ ESC fecha modal e galeria
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") {
+                fecharModalModelos();
+                fecharGaleria();
+            }
+        });
+
+        // 🖱️ Clique fora fecha o modal dos modelos
+        const modalModelos = document.getElementById('modalModelos');
+        if (modalModelos) {
+            modalModelos.addEventListener('click', function (e) {
+                if (e.target === this) {
+                    fecharModalModelos();
+                }
+            });
+        }
+
+        // 🖱️ Clique fora fecha galeria
+        const galeriaOverlay = document.getElementById('galeriaMiolo');
+        if (galeriaOverlay) {
+            galeriaOverlay.addEventListener('click', function (e) {
+                if (e.target === this) {
+                    fecharGaleria();
+                }
+            });
+        }
+    </script>
+
+    <!-- CARRINHO LATERAL -->
+    <script>
+        // 🔔 Abre o carrinho lateral
+        function abrirSidecart() {
+            document.getElementById("sidecart-overlay").style.display = "block";
+            document.getElementById("sidecart").style.right = "0px";
+            atualizarSidecart();
+        }
+
+        function fecharSidecart() {
+            document.getElementById("sidecart-overlay").style.display = "none";
+            document.getElementById("sidecart").style.right = "-420px";
+        }
+
+        function atualizarSidecart() {
+            const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+            const box = document.getElementById("sidecart-items");
+            if (!box) return;
+
+            box.innerHTML = "";
+            carrinho.forEach((item, index) => {
+                box.innerHTML += `
+                <div class="sidecart-item">
+                    <img src="${item.imagem}">
+                    <div style="flex:1">
+                        <strong>${item.nome}</strong><br>
+                        R$ ${(item.preco || 0).toFixed(2)}<br>
+                        <small>Qtd: ${item.quantidade}</small>
+                    </div>
+                    <button onclick="event.stopPropagation(); removerItem(${index}); atualizarSidecart();" style="background:none;border:none;color:red;font-size:18px;">✖</button>
+                </div>
+                `;
+            });
+        }
+
+        const _addToCart_original = addToCart;
+
+        addToCart = function (item) {
+            _addToCart_original(item);
+            abrirSidecart();
+        };
+    </script>
+    <script>
+        document.addEventListener("click", function (e) {
+            const sidecart = document.getElementById("sidecart");
+            const overlay = document.getElementById("sidecart-overlay");
+
+            if (!sidecart || !overlay) return;
+
+            // Carrinho fechado → não faz nada
+            if (overlay.style.display !== "block") return;
+
+            // Clique dentro da aba do carrinho → não fecha
+            if (sidecart.contains(e.target)) return;
+
+            // Clique dentro de qualquer botão que adiciona ao carrinho → não fecha
+            if (e.target.closest("[onclick*='addToCart']")) return;
+
+            // Se chegou aqui → clicou fora → fecha
+            fecharSidecart();
+        });
+    </script>
+    <script>
+        document.getElementById("cart-tab").addEventListener("click", function (e) {
+            e.stopPropagation(); // garante que o "fechar ao clicar fora" não feche a aba ao abrir
+            abrirSidecart();
+        });
+    </script>
 
 
 

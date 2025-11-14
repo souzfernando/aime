@@ -179,10 +179,7 @@ label{
 button{
   border-radius:0
 }
-button:focus{
-  outline:1px dotted;
-  outline:5px auto -webkit-focus-ring-color
-}
+
 input, button, select, optgroup, textarea{
   margin:0;
   font-family:inherit;
@@ -2019,32 +2016,32 @@ a.btn.disabled, fieldset:disabled a.btn{
 }
 .btn-success{
   color:#fff;
-  background-color:#28a745;
-  border-color:#28a745
+  background-color:#3D464D;
+  border-color:#3D464D;
 }
 .btn-success:hover{
   color:#fff;
-  background-color:rgb(32.6086956522, 136.1413043478, 56.25);
-  border-color:rgb(30.1449275362, 125.8550724638, 52)
+  background-color:#444;
+  border-color:#444;
 }
 .btn-success:focus, .btn-success.focus{
   color:#fff;
-  background-color:rgb(32.6086956522, 136.1413043478, 56.25);
-  border-color:rgb(30.1449275362, 125.8550724638, 52);
-  box-shadow:0 0 0 .2rem rgba(72.25, 180.2, 96.9, .5)
+  background-color:#3D464D;
+  border-color:#3D464D;
+  box-shadow:#3D464D;
 }
 .btn-success.disabled, .btn-success:disabled{
   color:#fff;
-  background-color:#28a745;
-  border-color:#28a745
+  background-color:#3D464D;
+  border-color:#3D464D;
 }
 .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active, .show>.btn-success.dropdown-toggle{
   color:#fff;
-  background-color:rgb(30.1449275362, 125.8550724638, 52);
-  border-color:rgb(27.6811594203, 115.5688405797, 47.75)
+  background-color:#3D464D;
+  border-color:#3D464D;
 }
 .btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus, .show>.btn-success.dropdown-toggle:focus{
-  box-shadow:0 0 0 .2rem rgba(72.25, 180.2, 96.9, .5)
+  box-shadow:#3D464D;
 }
 .btn-info{
   color:#fff;
@@ -7745,14 +7742,7 @@ body{
   width:30px;
   background:#fff
 }
-.carousel-caption{
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background:rgba(61, 70, 77, .5);
-  z-index:1
-}
+
 .section-title::after{
   position:absolute;
   content:"";
@@ -7857,7 +7847,7 @@ body{
   transform:scale(1.2)
 }
 .product-item .btn:hover{
-  color:#ffd333 !important
+  color:#B3F3F0 !important
 }
 .table.table-borderless thead tr, .table.table-borderless tbody tr:not(:last-child){
   border-bottom:15px solid #f5f5f5

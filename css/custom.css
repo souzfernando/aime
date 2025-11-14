@@ -18,14 +18,14 @@
 }
 
 .col-logo {
-    flex: 0 0 70%;
-    max-width: 70%;
+  flex: 0 0 70%;
+  max-width: 70%;
 }
 
 .col-cart {
-    flex: 0 0 15%;
-    max-width: 15%;
-    padding: 10px;
+  flex: 0 0 15%;
+  max-width: 15%;
+  padding: 10px;
 }
 
 
@@ -37,8 +37,8 @@
   .logo-mobile {
     display: block;            /* mostra no mobile */
     text-align: center;        /* centraliza a logo */
-    margin-bottom: 15px;       /* espaço inferior opcional */
-    margin-top: 15px;
+    margin-bottom: 8px;       /* espaço inferior opcional */
+    margin-top: 8px;
   }
 
   .logo-mobile img {
@@ -50,25 +50,28 @@
 
 .whatsapp-float {
   position: fixed;
-  bottom: 20px;         /* distância do fundo */
-  right: 20px;          /* distância da lateral */
-  z-index: 9999;
-  background-color: #25d366;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #b3f3f0;
   border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #3D464D;
+  z-index: 999;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.whatsapp-float img {
-  width: 45px;
-  height: 45px;
-  display: block;
-}
 
 .whatsapp-float:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  color: #3D464D;
 }
 
 /* Versão mobile (opcional) */
@@ -85,20 +88,6 @@
   }
 }
 
-.carousel-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* escurece a imagem */
-  z-index: 1;
-}
-
-.carousel-caption {
-  z-index: 2; /* fica acima do overlay */
-}
 
 /* --- Modal principal --- */
 .modal {
@@ -163,17 +152,24 @@
 
 .galeria-container img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 90vh; /* 90% da altura visível da tela */
   border-radius: 8px;
   user-select: none;
+  object-fit: contain; /* mantém proporção sem cortar */
 }
+
+/*button:focus{
+  outline:1px dotted;
+  outline:5px auto -webkit-focus-ring-color
+}*/
 
 .galeria-container button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: white;
+  /*background: rgba(0,0,0,0.6);*/
+  background: none;
+  color: #3D464D;
   border: none;
   font-size: 32px;
   padding: 10px 16px;
@@ -184,29 +180,17 @@
 }
 
 .galeria-container button:hover {
-  background: rgba(255,255,255,0.2);
+  background: #56626b;
 }
 
 .galeria-container .prev { left: 10px; }
 .galeria-container .next { right: 10px; }
-
-.galeria-container .escolher-btn {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #007bff;
-  border: none;
-  color: white;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 15px;
-}
-
-.galeria-container .escolher-btn:hover {
-  background: #0056b3;
+.galeria-container .prev,
+.galeria-container .next {
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .galeria-overlay .close {
@@ -290,51 +274,56 @@ body.no-scroll {
 /* ===============================
    TOPO FIXO 100% FUNCIONAL
    =============================== */
-.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2000;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
+   .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
 
 /* Remove margens internas do tema */
 .site-header .mb-30 {
   margin-bottom: 0 !important;
 }
 
+.pb-head, .py-head {
+  padding-bottom: 0.4rem !important;
+  padding-top : 0.4rem !important;
+}
+
 /* Compensa o espaço ocupado pelo topo no corpo */
 body {
-  padding-top: 230px; /* Altura real do topo + navbar */
+  padding-top: 200px; /* Altura real do topo + navbar */
 }
 
 /* ======================================
    MOBILE
    ====================================== */
-@media (max-width: 991.98px) {
-  .site-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2000;
-  }
+   @media (max-width: 991.98px) {
+    .site-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 2000;
+    }
 
-  /* Corrige sobreposição no mobile */
-  body {
-    padding-top: 210px; /* altura da barra + menu */
-  }
+    /* Corrige sobreposição no mobile */
+    body {
+      padding-top: 196px; /* altura da barra + menu */
+    }
 
-  /* Corrige comportamento do dropdown */
-  #navbar-vertical {
-    position: fixed;
-    top: 130px !important;
-    left: 0;
-    width: 100%;
-    z-index: 1999;
+    /* Corrige comportamento do dropdown */
+    #navbar-vertical {
+      position: fixed;
+      top: 130px !important;
+      left: 0;
+      width: 100%;
+      z-index: 1999;
+    }
   }
-}
 
 /* Garante que dropdown de categorias não apareça cortado */
 #navbar-vertical.show {
@@ -351,5 +340,347 @@ html, body {
 }
 
 
+td.align-middle {
+  text-align: left;
+}
+
+/* Sidebar do carrinho */
+#sidecart {
+  position: fixed;
+  top: 0;
+  right: -400px; /* ou o valor que você usa */
+  width: 400px;
+  height: 100vh;
+  background: #fff;
+  z-index: 999999 !important; /* ACIMA DO WHATSAPP */
+  transition: right 0.3s ease;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+}
+
+#cart-tab i {
+  color: #fff;
+  font-size: 28px; /* ajuste opcional */
+}
+
+/* Fundo escuro */
+#sidecart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  z-index: 999998 !important; /* logo abaixo da sidebar */
+}
+
+
+.sidecart-header {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+#sidecart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.sidecart-item {
+  display: flex;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.sidecart-item img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.finalizar-btn {
+  width: 100%;
+  padding: 12px;
+  background: green;
+  color: #fff;
+  border: none;
+}
+
+.cart-tab {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #ff5722;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 10px 0 0 10px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 99999;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  transition: background 0.2s, padding-right 0.2s;
+}
+
+.cart-tab:hover {
+  background: #e64a19;
+  padding-right: 20px;
+}
+
+
+/* ESCURECE A IMAGEM LEVEMENTE CARROSSEL*/
+/* Container do slide precisa esconder o transbordo */
+.carousel-item {
+  overflow: hidden;
+}
+
+/* Imagem do carousel com transição para o zoom */
+.carousel-item img {
+  transition: transform 0.6s ease;
+}
+
+/* Zoom igual ao das imagens das ofertas */
+.carousel-item:hover img {
+  transform: scale(1.1);
+}
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); /* ajuste entre 0.2 e 0.5 */
+  z-index: 1;
+}
+
+/* TEXTO ACIMA DO OVERLAY */
+.carousel-caption h1 {
+  color: #fff;
+  font-weight: 900;
+  text-shadow:
+  3px 3px 0 #000,
+  6px 6px 0 rgba(0,0,0,0.4);
+}
+
+.carousel-caption p {
+  color: #fff;
+  text-shadow:
+  2px 2px 0 #000,
+  4px 4px 0 rgba(0,0,0,0.3);
+}
+
+.carousel-caption {
+  z-index: 2; /* fica acima do overlay */
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%);
+}
+
+
+
+/* --- Scoped styles apenas para as ofertas na coluna direita --- */
+
+/* garante que o card posicione overlay e texto acima da imagem */
+.col-lg-4 .product-offer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; /* opcional, deixa com canto arredondado */
+}
+
+/* imagem ocupa todo o card e fica levemente escura */
+.col-lg-4 .product-offer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease, filter .3s ease;
+  filter: brightness(0.78); /* escurece levemente — ajuste entre 0.6 e 0.9 */
+}
+
+/* efeito sutil ao passar o mouse (opcional) */
+.col-lg-4 .product-offer:hover img {
+  transform: scale(1.03);
+  filter: brightness(0.85);
+}
+
+/* overlay sutil para reforçar contraste (usa z-index baixo) */
+.col-lg-4 .product-offer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.18); /* ajuste se quiser mais/menos escuro */
+  z-index: 1;
+}
+
+/* texto deve ficar acima do overlay */
+.col-lg-4 .product-offer .offer-text {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  max-width: calc(100% - 40px);
+  /* opcional: um fundo leve 'papel recortado' */
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02); /* quase transparente para não bloquear a imagem */
+}
+
+/* estilo 'cartoon / paper-cut' para título e subtítulo */
+.col-lg-4 .product-offer .offer-text h6,
+.col-lg-4 .product-offer .offer-text h3 {
+  color: #fff;
+  font-weight: 900;
+  margin: 0;
+  text-shadow:
+  2px 2px 0 #000,
+  4px 4px 0 rgba(0,0,0,0.25);
+}
+
+/* diferenciação entre h6 e h3 (opcional) */
+.col-lg-4 .product-offer .offer-text h6 {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: .95;
+}
+.col-lg-4 .product-offer .offer-text h3 {
+  font-size: 1.25rem;
+  margin-top: 6px;
+}
+
+/* hover do botão */
+.btn-cartoon:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0 #000;
+  background: #fff;
+}
+
+/* responsivo: ajusta posição do texto em telas pequenas */
+@media (max-width: 991px) {
+  .btn-cartoon {
+    left: 12px;
+    right: 12px;
+    top: auto;
+    bottom: 12px;
+    transform: none;
+  }
+}
+
+
+/* BOTÃO CARTOON */
+.btn-cartoon {
+  background: #b3f3f0 !important;
+  border: 3px solid #000 !important;
+  color: #3D464D !important;
+  font-weight: 900;
+  border-radius: 10px;
+  padding: 10px 22px !important;
+  box-shadow: 4px 4px 0 #000 !important;
+  transition: .2s;
+  text-decoration: none !important;
+  display: inline-block;
+  text-decoration: none !important;
+}
+
+
+/* animação cartoon ao passar o mouse */
+.btn-cartoon:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0 #000;
+  background: #fff;
+  color: #3D464D;
+  text-decoration: none !important;
+}
+
+.btn-cartoon:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0 #000 !important;
+  background: #fff !important;
+}
+
+/* ícone dentro do botão também preto */
+.btn-cartoon i {
+  color: #3D464D !important;
+}
+
+.galeria-container .escolher-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);              /* centraliza */
+  top: 80%;
+  background: #b3f3f0 !important;
+  border: 3px solid #000 !important;
+  color: #000 !important;
+  font-weight: 900;
+  font-size: 16px !important;          /* diminui o tamanho da fonte */
+  padding: 12px 18px !important;        /* diminui largura e altura do botão */
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 #000 !important;    /* sombra inicial */
+  transition: transform .15s ease, box-shadow .15s ease, background .15s;
+  z-index: 2;
+}
+
+/* no hover: o botão sobe (translateY negativo) e a sombra aumenta o offset,
+   assim a sombra parece "ficar atrás" do botão (melhor efeito visual) */
+.galeria-container .escolher-btn:hover {
+  transform: translateX(-50%) translateY(-4px);  /* sobe 4px */
+  box-shadow: 8px 8px 0 #000 !important;         /* sombra deslocada mais para baixo */
+  background: #fff !important;
+}
+
+/* CONTAINER DOS PRODUTOS */
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* CADA PRODUTO */
+.row1 .produto {
+  width: 33.33%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .row1 .produto {
+    width: 100% !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .row1 .produto {
+    width: 100%; /* 1 por linha */
+  }
+}
+
+
+/* PRODUTOS - DESKTOP 
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  justify-content: center;
+  /*gap: 20px;*/
+}
+
+/* MOBILE 
+@media (max-width: 768px) {
+  .row1 {
+    width: 100%;
+    padding: 0 10px;
+    
+  }
+}*/
 
 
