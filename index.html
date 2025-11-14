@@ -243,29 +243,29 @@
             <h5>Escolha o modelo do miolo:</h5>
             <!-- MODELO 1 -->
             <div class="modelos-grid">
-                <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas')">
-                    <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas">
-                    <p>Carisma com Horas</p>
+                <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas1')">
+                    <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas1">
+                    <p>Carisma com Horas 1</p>
                 </div>
-                <!-- MODELO  -->
-                <div class="modelo-item" onclick="abrirGaleria('planner')">
-                    <img src="img/miolo/planner/1.jpg" alt="Planner">
-                    <p>Planner</p>
+                <!-- MODELO 2 -->
+                <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas2')">
+                    <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas2">
+                    <p>Carisma com Horas 2</p>
                 </div>
                 <!-- MODELO 3 -->
-                <div class="modelo-item" onclick="abrirGaleria('semanal')">
-                    <img src="img/miolo/semanal/1.jpg" alt="Semanal">
-                    <p>Semanal</p>
+                <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas3')">
+                    <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas3">
+                    <p>Carisma com Horas 3</p>
                 </div>
                 <!-- MODELO 4 -->
-                <div class="modelo-item" onclick="abrirGaleria('semanal')">
-                    <img src="img/miolo/semanal/1.jpg" alt="Semanal">
-                    <p>Semanal</p>
+                <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas4')">
+                    <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas4">
+                    <p>Carisma com Horas 4</p>
                 </div>
                 <!-- MODELO 5 -->
-                <div class="modelo-item" onclick="abrirGaleria('semanal')">
-                    <img src="img/miolo/semanal/1.jpg" alt="Semanal">
-                    <p>Semanal</p>
+                <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas5')">
+                    <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas5">
+                    <p>Carisma com Horas 5</p>
                 </div>
             </div>
         </div>
@@ -278,9 +278,9 @@
             <button class="prev" onclick="mudarImagem(-1)">&#10094;</button>
             <img id="galeriaImagem" src="" alt="Galeria Miolo">
             <button class="next" onclick="mudarImagem(1)">&#10095;</button>
-            <button class="escolher-btn" onclick="escolherModeloAtual()"><i
-                class="fa fa-shopping-cart mr-2"></i>Escolher este modelo</button>
-            </div>
+            <button id="btnEscolherModelo" class="escolher-btn" onclick="escolherModeloAtual()">
+                <i class="fa fa-shopping-cart mr-2"></i>Escolher este modelo
+            </button>
         </div>
         <div id="toast" style="
         position: fixed;
@@ -420,114 +420,125 @@
             mostrarImagem();
             fecharModalModelos();
 
-            document.body.classList.add('no-scroll');
-            document.getElementById('galeriaMiolo').style.display = 'flex';
-        }
+            // ⬅️ Aqui muda o texto do botão!
+            document.getElementById('btnEscolherModelo').innerHTML =
+        `<i class="fa fa-shopping-cart mr-2"></i>Escolher ${nomeModelo}`;
+
+        document.body.classList.add('no-scroll');
+        document.getElementById('galeriaMiolo').style.display = 'flex';
+    }
 
         // 🖼️ Mostra imagem atual
-        function mostrarImagem() {
-            const img = document.getElementById('galeriaImagem');
-            img.src = imagensAtuais[indiceAtual];
-        }
+    function mostrarImagem() {
+        const img = document.getElementById('galeriaImagem');
+        img.src = imagensAtuais[indiceAtual];
+    }
 
         // ⬅️➡️ Muda de imagem
-        function mudarImagem(direcao) {
-            indiceAtual += direcao;
-            if (indiceAtual < 0) indiceAtual = imagensAtuais.length - 1;
-            if (indiceAtual >= imagensAtuais.length) indiceAtual = 0;
-            mostrarImagem();
-        }
+    function mudarImagem(direcao) {
+        indiceAtual += direcao;
+        if (indiceAtual < 0) indiceAtual = imagensAtuais.length - 1;
+        if (indiceAtual >= imagensAtuais.length) indiceAtual = 0;
+        mostrarImagem();
+    }
 
         // ❌ Fecha a galeria
-        function fecharGaleria() {
-            document.getElementById('galeriaMiolo').style.display = 'none';
-            document.body.classList.remove('no-scroll');
-        }
+    function fecharGaleria() {
+        document.getElementById('galeriaMiolo').style.display = 'none';
+        document.body.classList.remove('no-scroll');
+    }
 
         // 🛒 Escolher modelo atual e adicionar ao carrinho
-        function escolherModeloAtual() {
-            addToCart({
-                id: produtoAtual.id + '-' + modeloAtual.replace(/\s+/g, '-').toLowerCase(),
-                nome: produtoAtual.nome + ' - ' + modeloAtual,
-                preco: produtoAtual.preco,
-                img: imagensAtuais[0]
-            });
+    function escolherModeloAtual() {
+        addToCart({
+            id: produtoAtual.id + '-' + modeloAtual.replace(/\s+/g, '-').toLowerCase(),
+            nome: produtoAtual.nome + ' - ' + modeloAtual,
+            preco: produtoAtual.preco,
+            img: imagensAtuais[0],
+
+        });
+        
+        setTimeout(() => {
             fecharGaleria();
-            mostrarToast('Produto adicionado ao carrinho!');
-        }
+            abrirSidecart();
+        }, 150);
+
+        mostrarToast('Produto adicionado ao carrinho!');
+
+    }
 
         // ✅ Toast
-        function mostrarToast(msg) {
-            const toast = document.getElementById('toast');
-            toast.innerText = msg;
-            toast.style.display = 'block';
-            setTimeout(() => toast.style.display = 'none', 2000);
-        }
+    function mostrarToast(msg) {
+        const toast = document.getElementById('toast');
+        toast.innerText = msg;
+        toast.style.display = 'block';
+        setTimeout(() => toast.style.display = 'none', 2000);
+    }
 
         // 📱 Swipe no mobile
-        const galeria = document.getElementById('galeriaMiolo');
-        if (galeria) {
-            galeria.addEventListener('touchstart', (e) => startX = e.touches[0].clientX);
-            galeria.addEventListener('touchend', (e) => {
-                let diff = e.changedTouches[0].clientX - startX;
-                if (Math.abs(diff) > 50) {
-                    if (diff > 0) mudarImagem(-1);
-                    else mudarImagem(1);
-                }
-            });
-        }
+    const galeria = document.getElementById('galeriaMiolo');
+    if (galeria) {
+        galeria.addEventListener('touchstart', (e) => startX = e.touches[0].clientX);
+        galeria.addEventListener('touchend', (e) => {
+            let diff = e.changedTouches[0].clientX - startX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) mudarImagem(-1);
+                else mudarImagem(1);
+            }
+        });
+    }
 
         // ⌨️ ESC fecha modal e galeria
-        document.addEventListener("keydown", function (e) {
-            if (e.key === "Escape") {
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+            fecharModalModelos();
+            fecharGaleria();
+        }
+    });
+
+        // 🖱️ Clique fora fecha o modal dos modelos
+    const modalModelos = document.getElementById('modalModelos');
+    if (modalModelos) {
+        modalModelos.addEventListener('click', function (e) {
+            if (e.target === this) {
                 fecharModalModelos();
+            }
+        });
+    }
+
+        // 🖱️ Clique fora fecha galeria
+    const galeriaOverlay = document.getElementById('galeriaMiolo');
+    if (galeriaOverlay) {
+        galeriaOverlay.addEventListener('click', function (e) {
+            if (e.target === this) {
                 fecharGaleria();
             }
         });
+    }
+</script>
 
-        // 🖱️ Clique fora fecha o modal dos modelos
-        const modalModelos = document.getElementById('modalModelos');
-        if (modalModelos) {
-            modalModelos.addEventListener('click', function (e) {
-                if (e.target === this) {
-                    fecharModalModelos();
-                }
-            });
-        }
-
-        // 🖱️ Clique fora fecha galeria
-        const galeriaOverlay = document.getElementById('galeriaMiolo');
-        if (galeriaOverlay) {
-            galeriaOverlay.addEventListener('click', function (e) {
-                if (e.target === this) {
-                    fecharGaleria();
-                }
-            });
-        }
-    </script>
-
-    <!-- CARRINHO LATERAL -->
-    <script>
+<!-- CARRINHO LATERAL -->
+<script>
         // 🔔 Abre o carrinho lateral
-        function abrirSidecart() {
-            document.getElementById("sidecart-overlay").style.display = "block";
-            document.getElementById("sidecart").style.right = "0px";
-            atualizarSidecart();
-        }
+    function abrirSidecart() {
+        document.getElementById("sidecart-overlay").style.display = "block";
+        document.getElementById("sidecart").style.right = "0px";
+        atualizarSidecart();
+    }
 
-        function fecharSidecart() {
-            document.getElementById("sidecart-overlay").style.display = "none";
-            document.getElementById("sidecart").style.right = "-420px";
-        }
+    function fecharSidecart() {
+        document.getElementById("sidecart-overlay").style.display = "none";
+        document.getElementById("sidecart").style.right = "-420px";
+    }
 
-        function atualizarSidecart() {
-            const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-            const box = document.getElementById("sidecart-items");
-            if (!box) return;
+    function atualizarSidecart() {
+        const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+        const box = document.getElementById("sidecart-items");
+        if (!box) return;
 
-            box.innerHTML = "";
-            carrinho.forEach((item, index) => {
-                box.innerHTML += `
+        box.innerHTML = "";
+        carrinho.forEach((item, index) => {
+            box.innerHTML += `
                 <div class="sidecart-item">
                     <img src="${item.imagem}">
                     <div style="flex:1">
@@ -537,39 +548,40 @@
                     </div>
                     <button onclick="event.stopPropagation(); removerItem(${index}); atualizarSidecart();" style="background:none;border:none;color:red;font-size:18px;">✖</button>
                 </div>
-                `;
-            });
-        }
+            `;
+        });
+    }
 
-        const _addToCart_original = addToCart;
+    const _addToCart_original = addToCart;
 
-        addToCart = function (item) {
-            _addToCart_original(item);
-            abrirSidecart();
-        };
-    </script>
-    <script>
-        document.addEventListener("click", function (e) {
-            const sidecart = document.getElementById("sidecart");
-            const overlay = document.getElementById("sidecart-overlay");
+    addToCart = function (item) {
+        _addToCart_original(item);
+        mostrarToast('Produto adicionado ao carrinho!');
+        abrirSidecart();
+    };
+</script>
+<script>
+    document.addEventListener("click", function (e) {
+        const sidecart = document.getElementById("sidecart");
+        const overlay = document.getElementById("sidecart-overlay");
 
-            if (!sidecart || !overlay) return;
+        if (!sidecart || !overlay) return;
 
             // Carrinho fechado → não faz nada
-            if (overlay.style.display !== "block") return;
+        if (overlay.style.display !== "block") return;
 
             // Clique dentro da aba do carrinho → não fecha
-            if (sidecart.contains(e.target)) return;
+        if (sidecart.contains(e.target)) return;
 
             // Clique dentro de qualquer botão que adiciona ao carrinho → não fecha
-            if (e.target.closest("[onclick*='addToCart']")) return;
+        if (e.target.closest("[onclick*='addToCart']")) return;
 
             // Se chegou aqui → clicou fora → fecha
-            fecharSidecart();
-        });
-    </script>
-    <script>
-        document.getElementById("cart-tab").addEventListener("click", function (e) {
+        fecharSidecart();
+    });
+</script>
+<script>
+    document.getElementById("cart-tab").addEventListener("click", function (e) {
             e.stopPropagation(); // garante que o "fechar ao clicar fora" não feche a aba ao abrir
             abrirSidecart();
         });
