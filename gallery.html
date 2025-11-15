@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Aimê Personalizados</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Template CSS -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- Galeria -->
+    <link rel="stylesheet" href="css/gallery-style.css">
+</head>
+
+<body>
+
+    <!-- Head Start -->
+    <div id="head"></div>
+    <!-- Head End -->
+
+<div id="sidecart-overlay"></div>
+<div id="sidecart">
+    <div class="sidecart-header">
+        <h3>Meu Carrinho</h3>
+        <button onclick="fecharSidecart()">✖</button>
+    </div>
+
+    <div id="sidecart-items"></div>
+
+    <div class="sidecart-footer">
+        <button class="btn btn-block btn-primary font-weight-bold my-3 py-3" onclick="finalizarCompra()"><i
+            class="fab fa-whatsapp"></i> Finalizar Compra no WhatsApp</button>
+        </div>
+    </div>
+
+    <div id="cart-tab" class="cart-tab">
+        <i class="fa fa-shopping-cart"></i>
+    </div>
+
+
+    <!-- GALERIA -->
+    <div class="gallery-wrapper">
+        <div class="gallery" id="gallery"></div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <span id="modal-close">&times;</span>
+
+        <!-- setas do carrossel -->
+        <span class="nav prev" onclick="prevImage()">&#10094;</span>
+        <img id="modal-img" alt="Imagem ampliada">
+        <span class="nav next" onclick="nextImage()">&#10095;</span>
+    </div>
+
+    <!-- Footer Start -->
+    <div id="footer"></div>
+    <!-- Footer End -->
+
+    <script src="js/gallery-script.js"></script>
+
+    <!-- Carrega o topo -->
+    <script>
+        fetch('includes/head.html')
+        .then(res => res.text())
+        .then(html => {
+            const topoDiv = document.getElementById('head');
+            topoDiv.innerHTML = html;
+
+    // Atualiza o contador assim que o topo estiver no DOM
+            updateCartCount();
+        });
+    </script>
+
+<!-- Carrega o Rodapé -->
+<script>
+    fetch("includes/footer.html")
+    .then(res => res.text())
+    .then(html => document.getElementById("footer").innerHTML = html);
+</script>
+
+<!-- JS Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- JS do Carrinho -->
+<script src="js/cart.js"></script>
+
+<script>
+  // Carrega o topo e só depois inicializa o carrinho
+  fetch('topo.html')
+  .then(res => res.text())
+  .then(html => {
+      document.getElementById('topo').innerHTML = html;
+  })
+  .then(() => {
+          // Agora sim, quando o topo já foi carregado
+      if (typeof updateCartCount === 'function') updateCartCount();
+      if (typeof carregarCarrinho === 'function') carregarCarrinho();
+  });
+</script>
+
+</body>
+</html>

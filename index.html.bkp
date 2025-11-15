@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Aimê Personalizados</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Head Start -->
+    <div id="head"></div>
+    <!-- Head End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid mb-3">
+        <div class="row px-xl-5">
+            <div class="col-lg-8">
+                <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#header-carousel" data-slide-to="1"></li>
+                        <li data-target="#header-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item position-relative active" style="height: 430px;">
+                            <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg"
+                            style="object-fit: cover;">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">
+                                    Cadernetas de Saúde</h1>
+                                    <!--<p class="mx-md-5 px-5 animate__animated animate__bounceIn">Cadernetas de saúde personalizadas e restaurações com qualidade. Criamos novos modelos ou recuperamos os antigos, mantendo suas informações organizadas e bem apresentadas.</p>-->
+                                    <a class="btn-cartoon mt-3 animate__animated animate__fadeInUp"
+                                    href="#">Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item position-relative" style="height: 430px;">
+                            <img class="position-absolute w-100 h-100" src="img/bg-verde.jpg"
+                            style="object-fit: cover;">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Agendas
+                                    Personalizadas</h1>
+                                    <!--<p class="mx-md-5 px-5 animate__animated animate__bounceIn">Agendas personalizadas feitas com cuidado e qualidade. Produzimos modelos sob medida para seu estilo ou marca, ideais para organizar compromissos e destacar sua identidade no dia a dia.</p>-->
+                                    <a class="btn-cartoon mt-3 animate__animated animate__fadeInUp"
+                                    href="#agenda">Conheça</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item position-relative" style="height: 430px;">
+                            <img class="position-absolute w-100 h-100" src="img/bg-verde.jpg"
+                            style="object-fit: cover;">
+                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                                <div class="p-3" style="max-width: 700px;">
+                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Cadernos
+                                    Personalizados</h1>
+                                    <!--<p class="mx-md-5 px-5 animate__animated animate__bounceIn">Cadernos personalizados feitos especialmente para você. Modelos únicos, criados com qualidade e atenção aos detalhes, perfeitos para anotações, estudos ou presentes cheios de personalidade.</p>-->
+                                    <a class="btn-cartoon mt-3 animate__animated animate__fadeInUp"
+                                    href="#">Orçamento</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="product-offer mb-30" style="height: 200px;">
+                    <img class="img-fluid" src="img/bg-verde.jpg" alt="">
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <a href="" class="btn-cartoon mt-3 animate__animated animate__fadeInUp">Shop Now</a>
+                    </div>
+                </div>
+                <div class="product-offer mb-30" style="height: 200px;">
+                    <img class="img-fluid" src="img/bg-verde.jpg" alt="">
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <a href="" class="btn-cartoon mt-3 animate__animated animate__fadeInUp">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- Featured Start -->
+    <div class="container-fluid pt-5">
+        <div class="row px-xl-5 pb-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-check text-primary-ico m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Quality</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-shipping-fast text-primary-ico m-0 mr-2"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                    <h1 class="fas fa-exchange-alt text-primary-ico m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-phone-volume text-primary-ico m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Featured End -->
+
+    <!-- Produtos Start -->
+    <div id="products-container"></div>
+    <!-- Produtos End -->
+
+    <!-- Offer Start -->
+    <div class="container-fluid pt-5 pb-3">
+        <div class="row px-xl-5">
+            <div class="col-md-6">
+                <div class="product-offer mb-30" style="height: 300px;">
+                    <img class="img-fluid" src="img/offer-1.jpg" alt="">
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <a href="" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-offer mb-30" style="height: 300px;">
+                    <img class="img-fluid" src="img/offer-2.jpg" alt="">
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <a href="" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Offer End -->
+
+    <!-- Vendor Start -->
+    <div class="container-fluid py-5">
+        <div class="row px-xl-5">
+            <div class="col">
+                <div class="owl-carousel vendor-carousel">
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-1.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-2.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-3.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-4.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-5.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-6.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-7.jpg" alt="">
+                    </div>
+                    <div class="bg-light p-4">
+                        <img src="img/vendor-8.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor End -->
+
+
+    <!-- Footer Start -->
+    <div id="footer"></div>
+    <!-- Footer End -->
+
+    <!-- Back to Top 
+<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>-->
+
+
+<!-- SIDECART - Carrinho Lateral -->
+<div id="sidecart-overlay"></div>
+<div id="sidecart">
+    <div class="sidecart-header">
+        <h3>Meu Carrinho</h3>
+        <button onclick="fecharSidecart()">✖</button>
+    </div>
+
+    <div id="sidecart-items"></div>
+
+    <div class="sidecart-footer">
+        <button class="btn btn-block btn-primary font-weight-bold my-3 py-3" onclick="finalizarCompra()"><i
+            class="fab fa-whatsapp"></i> Finalizar Compra no WhatsApp</button>
+        </div>
+    </div>
+
+    <div id="cart-tab" class="cart-tab">
+        <i class="fa fa-shopping-cart"></i>
+    </div>
+
+    <!-- MODAL MIOLO-->
+    <!-- Modal de modelos -->
+    <div id="modalModelos" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModalModelos()">&times;</span>
+            <h5>Escolha o modelo do miolo:</h5>
+            <!-- MODELO 1 -->
+            <div class="modelos-grid">
+                <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas1')">
+                    <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas1">
+                    <p>Carisma com Horas 1</p>
+                </div>
+                <!-- MODELO 2 -->
+                <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas2')">
+                    <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas2">
+                    <p>Carisma com Horas 2</p>
+                </div>
+                <!-- MODELO 3 -->
+                <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas3')">
+                    <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas3">
+                    <p>Carisma com Horas 3</p>
+                </div>
+                <!-- MODELO 4 -->
+                <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas4')">
+                    <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas4">
+                    <p>Carisma com Horas 4</p>
+                </div>
+                <!-- MODELO 5 -->
+                <div class="modelo-item" onclick="abrirGaleria('carisma-hora', 'Carisma com Horas5')">
+                    <img src="img/miolo/carisma-hora/1.jpg" alt="Carisma com Horas5">
+                    <p>Carisma com Horas 5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Galeria -->
+    <div id="galeriaMiolo" class="galeria-overlay" style="display:none;">
+        <span class="close" onclick="fecharGaleria()">&times;</span>
+        <div class="galeria-container">
+            <button class="prev" onclick="mudarImagem(-1)">&#10094;</button>
+            <img id="galeriaImagem" src="" alt="Galeria Miolo">
+            <button class="next" onclick="mudarImagem(1)">&#10095;</button>
+            <button id="btnEscolherModelo" class="escolher-btn" onclick="escolherModeloAtual()">
+                <i class="fa fa-shopping-cart mr-2"></i>Escolher este modelo
+            </button>
+        </div>
+        <div id="toast" style="
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #222;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        display: none;
+        z-index: 999999;
+        font-size: 14px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+        ">
+        Produto adicionado ao carrinho!
+    </div>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Carrega o topo -->
+    <script>
+        fetch('includes/head.html')
+        .then(res => res.text())
+        .then(html => {
+            const topoDiv = document.getElementById('head');
+            topoDiv.innerHTML = html;
+
+                // Atualiza o contador assim que o topo estiver no DOM
+            updateCartCount();
+        });
+    </script>
+
+    <!-- Carrega o Rodapé -->
+    <script>
+        fetch("includes/footer.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("footer").innerHTML = html);
+    </script>
+
+    <!-- Carrega os Produtos -->
+    <script>
+        fetch('includes/products.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('products-container').innerHTML = data;
+        })
+        .catch(error => console.error('Erro ao carregar produtos:', error));
+    </script>
+
+
+    <!-- Barra de Busca -->
+    <script>
+        const input = document.getElementById('busca');
+        const form = document.getElementById('formBusca');
+        const btn = document.getElementById('btnBusca');
+
+        // Função para remover acentos
+        function removerAcentos(str) {
+            return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
+        function buscarTexto() {
+            const termo = removerAcentos(input.value.trim().toLowerCase());
+            if (!termo) return;
+
+            const elementos = document.querySelectorAll('body *');
+            let encontrado = false;
+
+            for (let el of elementos) {
+                if (!el.textContent || el.offsetParent === null) continue;
+
+                const texto = removerAcentos(el.textContent.toLowerCase());
+                if (texto.includes(termo)) {
+                    encontrado = true;
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    const originalBg = el.style.backgroundColor;
+                    el.style.backgroundColor = '#b3f3f0';
+                    setTimeout(() => el.style.backgroundColor = originalBg, 1500);
+                    break;
+                }
+            }
+
+            if (!encontrado) {
+                alert('Texto não encontrado na página.');
+            }
+        }
+
+        // Enter no input
+        form.addEventListener('submit', buscarTexto);
+
+        // Clique no ícone
+        btn.addEventListener('click', buscarTexto);
+    </script>
+
+    <!-- JS do carrinho -->
+    <script src="js/cart.js"></script>
+
+    <!-- MODAL MIOLO -->
+    <script>
+        let produtoAtual = {};
+        let imagensAtuais = [];
+        let indiceAtual = 0;
+        let modeloAtual = '';
+        let startX = 0;
+
+        // 🟩 Abre o modal dos modelos
+        function abrirModalModelos(id, nome, preco, img) {
+            produtoAtual = { id, nome, preco, img };
+            document.getElementById('modalModelos').style.display = 'flex';
+        }
+
+        // 🟥 Fecha o modal dos modelos
+        function fecharModalModelos() {
+            document.getElementById('modalModelos').style.display = 'none';
+        }
+
+        // 🟦 Abre a galeria do modelo
+        function abrirGaleria(pasta, nomeModelo) {
+            modeloAtual = nomeModelo;
+            imagensAtuais = [];
+
+            for (let i = 1; i <= 8; i++) {
+                imagensAtuais.push(`img/miolo/${pasta}/${i}.jpg`);
+            }
+
+            indiceAtual = 0;
+            mostrarImagem();
+            fecharModalModelos();
+
+            // ⬅️ Aqui muda o texto do botão!
+            document.getElementById('btnEscolherModelo').innerHTML =
+        `<i class="fa fa-shopping-cart mr-2"></i>Escolher ${nomeModelo}`;
+
+        document.body.classList.add('no-scroll');
+        document.getElementById('galeriaMiolo').style.display = 'flex';
+    }
+
+        // 🖼️ Mostra imagem atual
+    function mostrarImagem() {
+        const img = document.getElementById('galeriaImagem');
+        img.src = imagensAtuais[indiceAtual];
+    }
+
+        // ⬅️➡️ Muda de imagem
+    function mudarImagem(direcao) {
+        indiceAtual += direcao;
+        if (indiceAtual < 0) indiceAtual = imagensAtuais.length - 1;
+        if (indiceAtual >= imagensAtuais.length) indiceAtual = 0;
+        mostrarImagem();
+    }
+
+        // ❌ Fecha a galeria
+    function fecharGaleria() {
+        document.getElementById('galeriaMiolo').style.display = 'none';
+        document.body.classList.remove('no-scroll');
+    }
+
+        // 🛒 Escolher modelo atual e adicionar ao carrinho
+    function escolherModeloAtual() {
+        addToCart({
+            id: produtoAtual.id + '-' + modeloAtual.replace(/\s+/g, '-').toLowerCase(),
+            nome: produtoAtual.nome + ' - ' + modeloAtual,
+            preco: produtoAtual.preco,
+            img: imagensAtuais[0],
+
+        });
+        
+        setTimeout(() => {
+            fecharGaleria();
+            abrirSidecart();
+        }, 150);
+
+        mostrarToast('Produto adicionado ao carrinho!');
+
+    }
+
+        // ✅ Toast
+    function mostrarToast(msg) {
+        const toast = document.getElementById('toast');
+        toast.innerText = msg;
+        toast.style.display = 'block';
+        setTimeout(() => toast.style.display = 'none', 2000);
+    }
+
+        // 📱 Swipe no mobile
+    const galeria = document.getElementById('galeriaMiolo');
+    if (galeria) {
+        galeria.addEventListener('touchstart', (e) => startX = e.touches[0].clientX);
+        galeria.addEventListener('touchend', (e) => {
+            let diff = e.changedTouches[0].clientX - startX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) mudarImagem(-1);
+                else mudarImagem(1);
+            }
+        });
+    }
+
+        // ⌨️ ESC fecha modal e galeria
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+            fecharModalModelos();
+            fecharGaleria();
+        }
+    });
+
+        // 🖱️ Clique fora fecha o modal dos modelos
+    const modalModelos = document.getElementById('modalModelos');
+    if (modalModelos) {
+        modalModelos.addEventListener('click', function (e) {
+            if (e.target === this) {
+                fecharModalModelos();
+            }
+        });
+    }
+
+        // 🖱️ Clique fora fecha galeria
+    const galeriaOverlay = document.getElementById('galeriaMiolo');
+    if (galeriaOverlay) {
+        galeriaOverlay.addEventListener('click', function (e) {
+            if (e.target === this) {
+                fecharGaleria();
+            }
+        });
+    }
+</script>
+
+<!-- CARRINHO LATERAL -->
+<script>
+        // 🔔 Abre o carrinho lateral
+    function abrirSidecart() {
+        document.getElementById("sidecart-overlay").style.display = "block";
+        document.getElementById("sidecart").style.right = "0px";
+        atualizarSidecart();
+    }
+
+    function fecharSidecart() {
+        document.getElementById("sidecart-overlay").style.display = "none";
+        document.getElementById("sidecart").style.right = "-420px";
+    }
+
+    function atualizarSidecart() {
+        const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+        const box = document.getElementById("sidecart-items");
+        if (!box) return;
+
+        box.innerHTML = "";
+        carrinho.forEach((item, index) => {
+            box.innerHTML += `
+                <div class="sidecart-item">
+                    <img src="${item.imagem}">
+                    <div style="flex:1">
+                        <strong>${item.nome}</strong><br>
+                        R$ ${(item.preco || 0).toFixed(2)}<br>
+                        <small>Qtd: ${item.quantidade}</small>
+                    </div>
+                    <button onclick="event.stopPropagation(); removerItem(${index}); atualizarSidecart();" style="background:none;border:none;color:red;font-size:18px;">✖</button>
+                </div>
+            `;
+        });
+    }
+
+    const _addToCart_original = addToCart;
+
+    addToCart = function (item) {
+        _addToCart_original(item);
+        mostrarToast('Produto adicionado ao carrinho!');
+        abrirSidecart();
+    };
+</script>
+<script>
+    document.addEventListener("click", function (e) {
+        const sidecart = document.getElementById("sidecart");
+        const overlay = document.getElementById("sidecart-overlay");
+
+        if (!sidecart || !overlay) return;
+
+            // Carrinho fechado → não faz nada
+        if (overlay.style.display !== "block") return;
+
+            // Clique dentro da aba do carrinho → não fecha
+        if (sidecart.contains(e.target)) return;
+
+            // Clique dentro de qualquer botão que adiciona ao carrinho → não fecha
+        if (e.target.closest("[onclick*='addToCart']")) return;
+
+            // Se chegou aqui → clicou fora → fecha
+        fecharSidecart();
+    });
+</script>
+<script>
+    document.getElementById("cart-tab").addEventListener("click", function (e) {
+            e.stopPropagation(); // garante que o "fechar ao clicar fora" não feche a aba ao abrir
+            abrirSidecart();
+        });
+    </script>
+
+
+
+
+
+</body>
+
+</html>
