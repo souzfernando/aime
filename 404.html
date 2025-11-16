@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Página não encontrada - 404</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Aimê Personalizados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    // Carrega o head.html sem quebrar o <head>
+    fetch("includes/head.html")
+      .then(r => r.text())
+      .then(html => {
+        const temp = document.createElement("div");
+        temp.innerHTML = html;
+
+        // move link, meta e script para o <head> real
+        temp.querySelectorAll("link, meta, script").forEach(el => {
+          document.head.appendChild(el);
+        });
+      });
+  </script>
 
     <style>
         body {
@@ -53,10 +69,66 @@
     </style>
 </head>
 <body>
+    <!-- Head Start -->
+    <div id="topo"></div>
+    <!-- Head End -->
     <div class="box">
         <h1>404</h1>
         <p>Ops! A página que você procura não existe.</p>
         <a href="/">Voltar para a página inicial</a>
     </div>
+
+    <!-- Componentes externos -->
+<div id="sidecart-container"></div>
+<div id="modal-modelos-container"></div>
+<div id="galeria-miolo-container"></div>
+
+<!-- Carregamento dos componentes -->
+<script src="js/load-components.js"></script>
+<script src="js/miolo-galeria.js"></script>
+
+<!-- Bibliotecas -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template -->
+<script src="js/main.js"></script>
+
+<!-- Carrinho -->
+<script src="js/cart.js"></script>
+
+<!-- Scripts separados -->
+<script src="js/busca.js"></script>
+<script src="js/miolo-modal.js"></script>
+<script src="js/sidecart.js"></script>
+<script src="js/produtos.js"></script>
+<script src="js/modal.js"></script>
+
+
+<!-- bloqueio cllique direito 
+<script>
+document.addEventListener("contextmenu", e => e.preventDefault());
+</script>-->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Espera os componentes carregarem
+    setTimeout(() => {
+        const hash = window.location.hash;
+
+        if (hash) {
+            const el = document.querySelector(hash);
+
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, 600); // intervalo ajustável
+});
+</script>
+
 </body>
 </html>
