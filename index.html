@@ -242,6 +242,23 @@
 <script>
 document.addEventListener("contextmenu", e => e.preventDefault());
 </script>-->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Espera os componentes carregarem
+    setTimeout(() => {
+        const hash = window.location.hash;
+
+        if (hash) {
+            const el = document.querySelector(hash);
+
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, 600); // intervalo ajustável
+});
+</script>
 
 </body>
 
