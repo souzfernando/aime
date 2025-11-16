@@ -1,31 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="utf-8">
-    <title>Aimê Personalizados</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+  <title>Aimê Personalizados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+  <script>
+    // Carrega o head.html sem quebrar o <head>
+    fetch("includes/head.html")
+    .then(r => r.text())
+    .then(html => {
+        const temp = document.createElement("div");
+        temp.innerHTML = html;
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Bootstrap Template CSS -->
-    <link href="css/style.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+        // move link, meta e script para o <head> real
+        temp.querySelectorAll("link, meta, script").forEach(el => {
+          document.head.appendChild(el);
+      });
+    });
+</script>
 </head>
+
 <body>
     <!-- Head Start -->
-    <div id="head"></div>
+    <div id="topo"></div>
     <!-- Head End -->
 
     <!-- 🛒 Carrinho Dinâmico -->
@@ -79,48 +78,31 @@
     <div id="footer"></div>
 <!-- Footer End -->
 
-<!-- Carrega o topo -->
-<script>
-    fetch('includes/head.html')
-    .then(res => res.text())
-    .then(html => {
-        const topoDiv = document.getElementById('head');
-        topoDiv.innerHTML = html;
+<!-- Componentes externos -->
+<div id="sidecart-container"></div>
+<div id="modal-modelos-container"></div>
+<div id="galeria-miolo-container"></div>
 
-    // Atualiza o contador assim que o topo estiver no DOM
-        updateCartCount();
-    });
-</script>
+<!-- Carregamento dos componentes -->
+<script src="js/load-components.js"></script>
+<script src="js/miolo-galeria.js"></script>
 
-<!-- Carrega o Rodapé -->
-<script>
-    fetch("includes/footer.html")
-    .then(res => res.text())
-    .then(html => document.getElementById("footer").innerHTML = html);
-</script>
-
-<!-- JS Libraries -->
+<!-- Bibliotecas -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 <script src="lib/easing/easing.min.js"></script>
 <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-<!-- JS do Carrinho -->
+<!-- Template -->
+<script src="js/main.js"></script>
+
+<!-- Carrinho -->
 <script src="js/cart.js"></script>
 
-<script>
-  // Carrega o topo e só depois inicializa o carrinho
-  fetch('topo.html')
-  .then(res => res.text())
-  .then(html => {
-      document.getElementById('topo').innerHTML = html;
-  })
-  .then(() => {
-          // Agora sim, quando o topo já foi carregado
-      if (typeof updateCartCount === 'function') updateCartCount();
-      if (typeof carregarCarrinho === 'function') carregarCarrinho();
-  });
-</script>
+<!-- Scripts separados -->
+<script src="js/busca.js"></script>
+<script src="js/miolo-modal.js"></script>
+<script src="js/sidecart.js"></script>
 
 </body>
 </html>

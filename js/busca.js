@@ -2,6 +2,23 @@ function removerAcentos(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
+function mostrarAviso(msg) {
+    let aviso = document.getElementById('resultado-aviso');
+
+    if (!aviso) {
+        aviso = document.createElement('div');
+        aviso.id = 'resultado-aviso';
+        document.body.appendChild(aviso);
+    }
+
+    aviso.textContent = msg;
+    aviso.style.opacity = '1';
+
+    setTimeout(() => {
+        aviso.style.opacity = '0';
+    }, 3000);
+}
+
 function buscarTexto() {
     const input = document.getElementById('busca');
     const termo = removerAcentos(input.value.trim().toLowerCase());
@@ -16,16 +33,27 @@ function buscarTexto() {
         const texto = removerAcentos(el.textContent.toLowerCase());
         if (texto.includes(termo)) {
             encontrado = true;
+
             el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            const originalBg = el.style.backgroundColor;
-            el.style.backgroundColor = '#b3f3f0';
-            setTimeout(() => el.style.backgroundColor = originalBg, 1500);
+
             break;
         }
     }
 
-    if (!encontrado) alert('Texto não encontrado na página.');
+    if (!encontrado) {
+        mostrarAviso('Nenhum resultado encontrado.');
+    }
 }
 
-document.getElementById('formBusca').addEventListener('submit', buscarTexto);
-document.getElementById('btnBusca').addEventListener('click', buscarTexto);
+function inicializarBusca() {
+    const form = document.getElementById('formBusca');
+    const btn = document.getElementById('btnBusca');
+    if (!form || !btn) return;
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        buscarTexto();
+    });
+
+    btn.addEventListener('click', buscarTexto);
+}

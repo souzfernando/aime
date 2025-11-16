@@ -51,20 +51,35 @@ loadComponent("galeria-miolo-container", "includes/galeria-miolo.html", () => {
 
 
 /* ────────────────────────────────────────────────
-   🟥 HEAD
+   🟥 TOPO
 ────────────────────────────────────────────────── */
-fetch("includes/head.html")
+fetch("includes/topo.html")
     .then(r => r.text())
     .then(html => {
-        const headEl = document.getElementById("head");
-        if (headEl) {
-            headEl.innerHTML = html;
+        const topoEl = document.getElementById("topo");
+        if (topoEl) {
+            topoEl.innerHTML = html;
 
             if (typeof updateCartCount === "function") {
                 updateCartCount();
             }
         }
+
+        // 🔵 AGORA SIM o topo existe → registrar os eventos da busca
+        inicializarBusca();
+
+        // Clique no carrinho
+        document.addEventListener('click', function(e){
+            const el = e.target.closest('#cart-tab, .pex-cart, .cart-tab');
+            if (!el) return;
+
+            e.preventDefault();
+            e.stopPropagation();
+            abrirSidecart();
+        });
     });
+
+
 
 /* ────────────────────────────────────────────────
    🟪 FOOTER

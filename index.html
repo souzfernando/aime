@@ -2,35 +2,30 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="utf-8">
-    <title>Aimê Personalizados</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+  <meta charset="utf-8">
+  <title>Aimê Personalizados</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+  <script>
+    // Carrega o head.html sem quebrar o <head>
+    fetch("includes/head.html")
+      .then(r => r.text())
+      .then(html => {
+        const temp = document.createElement("div");
+        temp.innerHTML = html;
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+        // move link, meta e script para o <head> real
+        temp.querySelectorAll("link, meta, script").forEach(el => {
+          document.head.appendChild(el);
+        });
+      });
+  </script>
 </head>
 
 <body>
 
     <!-- Head Start -->
-    <div id="head"></div>
+    <div id="topo"></div>
     <!-- Head End -->
 
     <!-- Carousel Start -->
@@ -88,18 +83,17 @@
             </div>
             <div class="col-lg-4">
                 <div class="product-offer mb-30" style="height: 200px;">
-                    <img class="img-fluid" src="img/bg-verde.jpg" alt="">
+                    <img class="img-fluid" src="img/design-exclusivo-1.jpg" alt="Design exclusivo">
                     <div class="offer-text">
-                        <h6 class="text-white text-uppercase">Save 20%</h6>
-                        <h3 class="text-white mb-3">Special Offer</h3>
-                        <a href="" class="btn-cartoon mt-3 animate__animated animate__fadeInUp">Shop Now</a>
+                        <h3 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Design exclusivo</h3>
+                        <a href="" class="btn-cartoon mt-3 animate__animated animate__fadeInUp">Saiba Mais</a>
                     </div>
                 </div>
                 <div class="product-offer mb-30" style="height: 200px;">
                     <img class="img-fluid" src="img/bg-verde.jpg" alt="">
                     <div class="offer-text">
                         <h6 class="text-white text-uppercase">Save 20%</h6>
-                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <h3 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Special Offer</h3>
                         <a href="" class="btn-cartoon mt-3 animate__animated animate__fadeInUp">Shop Now</a>
                     </div>
                 </div>
@@ -109,7 +103,7 @@
     <!-- Carousel End -->
 
 
-    <!-- Featured Start -->
+    <!-- Featured Start ->
     <div class="container-fluid pt-5">
         <div class="row px-xl-5 pb-3">
             <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
@@ -138,7 +132,7 @@
             </div>
         </div>
     </div>
-    <!-- Featured End -->
+    <!- Featured End -->
 
     <!-- Produtos Start -->
     <div id="products-container"></div>
@@ -171,7 +165,7 @@
     </div>
     <!-- Offer End -->
 
-    <!-- Vendor Start -->
+    <!-- Vendor Start ->
     <div class="container-fluid py-5">
         <div class="row px-xl-5">
             <div class="col">
@@ -204,11 +198,12 @@
             </div>
         </div>
     </div>
-    <!-- Vendor End -->
+    <!- Vendor End -->
 
 
-<!-- Footer -->
-<div id="footer"></div>
+    <!-- Footer Start -->
+    <div id="footer"></div>
+    <!-- Footer End -->
 
 <!-- Back to Top (opcional)
 <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
@@ -239,6 +234,14 @@
 <script src="js/busca.js"></script>
 <script src="js/miolo-modal.js"></script>
 <script src="js/sidecart.js"></script>
+<script src="js/produtos.js"></script>
+<script src="js/modal.js"></script>
+
+
+<!-- bloqueio cllique direito 
+<script>
+document.addEventListener("contextmenu", e => e.preventDefault());
+</script>-->
 
 </body>
 

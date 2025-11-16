@@ -93,6 +93,21 @@ body {
     right: 30px;
 }
 
+/* Modal da galeria por cima de tudo */
+#modal {
+    z-index: 99999 !important;
+}
+
+/* Setas do carrossel também */
+#modal .nav {
+    z-index: 100000 !important;
+}
+
+#cart-tab {
+    z-index: 3000;
+}
+
+
 @media (max-width: 600px) {
     .gallery {
         columns: 2;
