@@ -3,27 +3,29 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Aimê Personalizados</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width">
 
-  <!-- FAVICON -->
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
 
-  <script>
-    // Carrega o head.html sem quebrar o <head>
-    fetch("includes/head.html")
-      .then(r => r.text())
-      .then(html => {
-        const temp = document.createElement("div");
-        temp.innerHTML = html;
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-        // move link, meta e script para o <head> real
-        temp.querySelectorAll("link, meta, script").forEach(el => {
-          document.head.appendChild(el);
-        });
-      });
-  </script>
+  <!-- Bibliotecas -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- CSS do site -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/gallery-style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+  <link href="css/modal.css" rel="stylesheet">
+  <link href="css/controller.css" rel="stylesheet">
 </head>
+
 
 <body>
 
