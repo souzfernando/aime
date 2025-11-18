@@ -1,0 +1,15 @@
+<div id="galeriaMiolo" class="galeria-overlay" style="display:none;">
+    <span class="close" onclick="fecharGaleria()">&times;</span>
+
+    <div class="galeria-container">
+        <button class="prev" onclick="mudarImagem(-1)">&#10094;</button>
+        <img id="galeriaImagem" src="" alt="Galeria Miolo">
+        <button class="next" onclick="mudarImagem(1)">&#10095;</button>
+
+        <button id="btnEscolherModelo" class="escolher-btn" onclick="escolherModeloAtual()">
+            <i class="fa fa-shopping-cart mr-2"></i>Escolher
+        </button>
+    </div>
+
+    <div id="toast"></div>
+</div>
