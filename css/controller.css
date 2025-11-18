@@ -99,6 +99,15 @@ a:not([href]):not([class]):hover {
     text-decoration: none;
 }
 
+.text-decoration-none{
+  text-decoration:none !important
+}
+
+.text-truncate{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}
 
 /* ---------------------------------
    PERSONALIZADOS

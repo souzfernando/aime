@@ -32,10 +32,10 @@ function abrirGaleria(pasta, nomeModelo) {
     fecharModalModelos();
 
     document.getElementById("btnEscolherModelo").innerHTML =
-        `<i class="fa fa-shopping-cart mr-2"></i>Escolher ${nomeModelo}`;
+`<i class="fa fa-shopping-cart mr-2"></i>Escolher ${nomeModelo}`;
 
-    document.body.classList.add("no-scroll");
-    document.getElementById("galeriaMiolo").style.display = "flex";
+document.body.classList.add("no-scroll");
+document.getElementById("galeriaMiolo").style.display = "flex";
 }
 
 // 🖼️ Mostra imagem atual
@@ -55,7 +55,19 @@ function mudarImagem(dir) {
 function fecharGaleria() {
     document.getElementById("galeriaMiolo").style.display = "none";
     document.body.classList.remove("no-scroll");
+
+// ❌ Se estiver na página "no-reopen", NÃO reabre o modal
+    if (document.body.classList.contains("no-reopen")) return;
+
+    // 🔥 Reabre o modal novamente
+    abrirModalModelos(
+        produtoAtual.id,
+        produtoAtual.nome,
+        produtoAtual.preco,
+        produtoAtual.img
+        );
 }
+
 
 // 🛒 Adiciona ao carrinho
 function escolherModeloAtual() {

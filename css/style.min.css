@@ -4930,12 +4930,7 @@ a.bg-warning:hover, a.bg-warning:focus, button.bg-warning:hover, button.bg-warni
 a.bg-danger:hover, a.bg-danger:focus, button.bg-danger:hover, button.bg-danger:focus{
   background-color:rgb(189.2151898734, 32.7848101266, 47.7721518987) !important
 }
-.bg-light{
-  background-color:#fff !important
-}
-a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus{
-  background-color:hsl(0, 0%, 90%) !important
-}
+
 .bg-dark{
   background-color:#3d464d !important
 }
@@ -7339,11 +7334,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus{
 .text-nowrap{
   white-space:nowrap !important
 }
-.text-truncate{
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap
-}
+
 .text-left{
   text-align:left !important
 }
@@ -7501,9 +7492,7 @@ a.text-dark:hover, a.text-dark:focus{
   background-color:rgba(0, 0, 0, 0);
   border:0
 }
-.text-decoration-none{
-  text-decoration:none !important
-}
+
 .text-break{
   word-break:break-word !important;
   word-wrap:break-word !important

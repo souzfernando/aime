@@ -76,4 +76,50 @@ document.addEventListener("keydown", e => {
     }
 });
 
+// ===============================
+// ⭐ SWIPE NO MOBILE – FUNCIONANDO
+// ===============================
+const modalEl = document.getElementById("modal");
+const modalImgEl = document.getElementById("modal-img");
+
+let swipeStartX = 0;
+let swipeStartY = 0;
+
+modalImgEl.addEventListener("touchstart", (e) => {
+    // só registra se o modal estiver aberto
+    if (modalEl.style.display === "flex") {
+        swipeStartX = e.touches[0].clientX;
+        swipeStartY = e.touches[0].clientY;
+    }
+}, { passive: true });
+
+modalImgEl.addEventListener("touchmove", (e) => {
+    if (modalEl.style.display !== "flex") return;
+
+    let diffX = Math.abs(e.touches[0].clientX - swipeStartX);
+    let diffY = Math.abs(e.touches[0].clientY - swipeStartY);
+
+    // se movimento é horizontal → bloqueia scroll vertical
+    if (diffX > diffY) {
+        e.preventDefault();
+    }
+}, { passive: false });
+
+modalImgEl.addEventListener("touchend", (e) => {
+    if (modalEl.style.display !== "flex") return;
+
+    let swipeEndX = e.changedTouches[0].clientX;
+    let diff = swipeEndX - swipeStartX;
+
+    // distância mínima para reconhecer swipe
+    if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+            prevImage(); // arrastou pra direita → imagem anterior
+        } else {
+            nextImage(); // arrastou pra esquerda → próxima
+        }
+    }
+}, { passive: true });
+
+
 loadImages();

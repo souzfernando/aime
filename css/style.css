@@ -390,7 +390,7 @@ body {
     align-items: center !important;
     justify-content: center !important;
 
-    width: 56px !important;    /* 👈 mesmo valor */
+    width: 40px !important;    /* 👈 mesmo valor */
     height: 40px !important;   /* 👈 vira círculo matemático */
 
     padding: 0 !important;     /* 👈 remove ovalizações */
@@ -446,25 +446,10 @@ body {
     font-size: 12px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* MOBILE: empilha com espaçamento */
-@media (max-width: 768px) {
-  .pex-search-wrapper { flex-direction: column; gap: 8px; padding: 8px; }
-  .pex-dropdown .pex-btn { border-radius: 12px; border-right: 1px solid #e6e6e6; }
-  .pex-search { border-left: 1px solid #e6e6e6; border-radius: 12px; }
+/* Desktop padrão */
+.topo-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-
-
 
