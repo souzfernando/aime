@@ -1,0 +1,57 @@
+.detalhes-produto {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity .2s ease, max-height .2s ease;
+}
+
+.detalhes-produto.open {
+    display: block;
+    opacity: 1;
+    max-height: 500px;
+}
+
+@keyframes abrir {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Container do "ver mais" */
+.ver-mais {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: #ff4d4f;
+    transition: color .25s ease;
+}
+
+.ver-mais:hover {
+    color: #1d3a45;
+    
+}
+
+/* Seta moderna */
+.ver-mais .seta {
+    display: inline-block;
+    font-size: 25px;
+    opacity: 0.7;
+    transform: translateY(1px); /* ajuste visual fino */
+    transition: 
+    transform .25s cubic-bezier(.4,0,.2,1),
+    opacity .25s ease;
+    transform: translateY(-2px);
+}
+
+/* Seta quando aberto */
+.ver-mais.open .seta {
+    transform: rotate(90deg) translateY(0);
+    opacity: 1;
+}
+
+/* Sutileza ao clicar */
+.ver-mais:active .seta {
+    transform: scale(0.92);
+}

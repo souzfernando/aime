@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Aimê Personalizados</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon">
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bibliotecas -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- CSS do site -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/style.min.css" rel="stylesheet">
+  <link href="assets/css/gallery-style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="assets/css/modal.css" rel="stylesheet">
+  <link href="assets/css/controller.css" rel="stylesheet">
+</head>
+
+<body class="no-scroll-modal pagina-galeria no-reopen">
+    <!-- Head Start -->
+    <div id="topo"></div>
+    <!-- Head End -->
+
+<!--<div id="sidecart-overlay"></div>
+<div id="sidecart">
+    <div class="sidecart-header">
+        <h3>Meu Carrinho</h3>
+        <button onclick="fecharSidecart()">✖</button>
+    </div>
+
+    <div id="sidecart-items"></div>
+
+    <div class="sidecart-footer">
+        <button class="btn btn-block btn-primary font-weight-bold my-3 py-3" onclick="finalizarCompra()"><i
+            class="fab fa-whatsapp"></i> Finalizar Compra no WhatsApp</button>
+        </div>
+    </div>
+
+    <div id="cart-tab" class="cart-tab">
+        <i class="fa fa-shopping-cart"></i>
+    </div>-->
+
+
+    <!-- GALERIA -->
+    <div class="gallery-wrapper">
+        <div class="gallery" id="gallery"></div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <span id="modal-close">&times;</span>
+
+        <!-- setas do carrossel -->
+        <span class="nav prev" onclick="prevImage()">&#10094;</span>
+        <img id="modal-img" alt="Imagem ampliada">
+        <span class="nav next" onclick="nextImage()">&#10095;</span>
+    </div>
+
+    <!-- Footer Start -->
+    <div id="footer"></div>
+    <!-- Footer End -->
+
+<!-- Preloader -->
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+
+<script src="js/gallery-script.js"></script>
+
+<!-- Componentes externos -->
+<div id="sidecart-container"></div>
+<div id="modal-modelos-container"></div>
+<div id="galeria-miolo-container"></div>
+
+<!-- Carregamento dos componentes -->
+<script src="js/load-components.js"></script>
+<script src="js/miolo-galeria.js"></script>
+
+<!-- Bibliotecas -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="assets/lib/easing/easing.min.js"></script>
+<script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Template -->
+<script src="js/main.js"></script>
+
+<!-- Carrinho -->
+<script src="js/cart.js"></script>
+
+<!-- Scripts separados -->
+<script src="js/busca.js"></script>
+<script src="js/miolo-modal.js"></script>
+<script src="js/sidecart.js"></script>
+<script src="js/produtos.js"></script>
+<script src="js/modal.js"></script>
+
+<!-- bloqueio cllique direito 
+<script>
+document.addEventListener("contextmenu", e => e.preventDefault());
+</script>-->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+    // Espera os componentes carregarem
+        setTimeout(() => {
+            const hash = window.location.hash;
+
+            if (hash) {
+                const el = document.querySelector(hash);
+
+                if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+    }, 600); // intervalo ajustável
+    });
+</script>
+
+</body>
+</html>

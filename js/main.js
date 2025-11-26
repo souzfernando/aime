@@ -128,3 +128,10 @@
     
 })(jQuery);
 
+const checkFooterYear = setInterval(() => {
+  const el = document.getElementById("ano-atual");
+  if (el) {
+    el.textContent = new Date().getFullYear();
+    clearInterval(checkFooterYear);
+  }
+}, 100);

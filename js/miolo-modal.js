@@ -1,5 +1,3 @@
-let produtoAtual = {};
-
 function initModalModelos() {
 
     const modal = document.getElementById("modalModelos");
@@ -9,7 +7,6 @@ function initModalModelos() {
         return;
     }
 
-    // Clique fora fecha
     modal.addEventListener("click", (e) => {
         if (e.target === modal) fecharModalModelos();
     });
