@@ -252,7 +252,17 @@ window.addEventListener('load', aosInit);
       }
     })
   }
+
+
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+const checkFooterYear = setInterval(() => {
+  const el = document.getElementById("ano-atual");
+  if (el) {
+    el.textContent = new Date().getFullYear();
+    clearInterval(checkFooterYear);
+  }
+}, 100);

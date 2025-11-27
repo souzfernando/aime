@@ -24,18 +24,27 @@ function buscarTexto() {
     const termo = removerAcentos(input.value.trim().toLowerCase());
     if (!termo) return;
 
-    const elementos = document.querySelectorAll('body *');
+    // elementos realmente de texto (muito mais preciso)
+    const seletor = 'p, span, li, a, h1, h2, h3, h4, h5, h6, small, label';
+    const elementos = document.querySelectorAll(seletor);
+
     let encontrado = false;
 
     for (let el of elementos) {
-        if (!el.textContent || el.offsetParent === null) continue;
+        if (!el.textContent) continue;
+        if (el.offsetParent === null) continue; // escondidos
 
         const texto = removerAcentos(el.textContent.toLowerCase());
-        if (texto.includes(termo)) {
+
+        // match mais preciso: palavra completa
+        const regex = new RegExp(`\\b${termo}\\b`, 'i');
+
+        if (regex.test(texto)) {
             encontrado = true;
-
             el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.style.outline = '2px solid red';
 
+            setTimeout(() => (el.style.outline = ''), 2000);
             break;
         }
     }
