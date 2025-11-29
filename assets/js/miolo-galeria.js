@@ -23,7 +23,7 @@ function abrirGaleria(pasta, nomeModelo) {
     imagensAtuais = [];
 
     for (let i = 1; i <= 8; i++) {
-        imagensAtuais.push(`img/miolo/${pasta}/${i}.jpg`);
+        imagensAtuais.push(`assets/img/miolo/${pasta}/${i}.jpg`);
     }
 
     indiceAtual = 0;

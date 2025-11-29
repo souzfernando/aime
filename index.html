@@ -10,7 +10,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicon -->
-  <link href="img/favicon.ico" rel="icon">
+  <link href="assets/img/favicon.ico" rel="icon">
 
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -34,10 +34,8 @@
   <!-- CSS do site -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/style.min.css" rel="stylesheet">
-  <link href="assets/css/gallery-style.css" rel="stylesheet">
+  <link href="assets/css/mobile.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/custom.css" rel="stylesheet">
-  <link href="assets/css/modal.css" rel="stylesheet">
   <link href="assets/css/controller.css" rel="stylesheet">
 </head>
 
@@ -49,83 +47,59 @@
 
   <main class="main">
 
-      <!-- Carousel Start -->
-      <div class="container-fluid mb-3">
-        <div class="row px-xl-5">
-            <div class="col-lg-8">
-                <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#header-carousel" data-slide-to="1"></li>
-                        <li data-target="#header-carousel" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item position-relative active" style="height: 430px;">
-                            <img class="position-absolute w-100 h-100" src="img/carousel-1.jpg"
-                            style="object-fit: cover;">
-                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div class="p-3" style="max-width: 700px;">
-                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">
-                                    Cadernetas de Saúde</h1>
-                                    <!--<p class="mx-md-5 px-5 animate__animated animate__bounceIn">Cadernetas de saúde personalizadas e restaurações com qualidade. Criamos novos modelos ou recuperamos os antigos, mantendo suas informações organizadas e bem apresentadas.</p>-->
-                                    <a class="btn-cartoon mt-3 animate__animated animate__fadeInUp"
-                                    href="#">Orçamento</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item position-relative" style="height: 430px;">
-                            <img class="position-absolute w-100 h-100" src="img/bg-verde.jpg"
-                            style="object-fit: cover;">
-                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div class="p-3" style="max-width: 700px;">
-                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Agendas
-                                    Personalizadas</h1>
-                                    <!--<p class="mx-md-5 px-5 animate__animated animate__bounceIn">Agendas personalizadas feitas com cuidado e qualidade. Produzimos modelos sob medida para seu estilo ou marca, ideais para organizar compromissos e destacar sua identidade no dia a dia.</p>-->
-                                    <a class="btn-cartoon mt-3 animate__animated animate__fadeInUp"
-                                    href="#agenda">Conheça</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item position-relative" style="height: 430px;">
-                            <img class="position-absolute w-100 h-100" src="img/bg-verde.jpg"
-                            style="object-fit: cover;">
-                            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                                <div class="p-3" style="max-width: 700px;">
-                                    <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Cadernos
-                                    Personalizados</h1>
-                                    <!--<p class="mx-md-5 px-5 animate__animated animate__bounceIn">Cadernos personalizados feitos especialmente para você. Modelos únicos, criados com qualidade e atenção aos detalhes, perfeitos para anotações, estudos ou presentes cheios de personalidade.</p>-->
-                                    <a class="btn-cartoon mt-3 animate__animated animate__fadeInUp"
-                                    href="#">Orçamento</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Carousel Start -->
+<div class="container-fluid mb-3 px-0">
+  <div class="row mx-0">
+    <div class="col-12 px-0">
+      <div id="header-carousel" class="carousel slide carousel-fade mb-30" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#header-carousel" data-slide-to="1"></li>
+          <li data-target="#header-carousel" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="carousel-item position-relative active" style="height: 430px;">
+            <img class="position-absolute w-100 h-100" src="assets/img/carousel/carousel-1.jpg" style="object-fit: cover;">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+              <div class="p-3" style="max-width: 700px;">
+                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Cadernetas de Saúde</h1>
+                <a class="btn-cartoon mt-3 animate__animated animate__fadeInUp" href="#">Orçamento</a>
+              </div>
             </div>
-            <div class="col-lg-4">
-                <div class="product-offer mb-30" style="height: 200px;">
-                    <img class="img-fluid" src="img/design-exclusivo-1.jpg" alt="Design exclusivo">
-                    <div class="offer-text">
-                        <h3 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Design exclusivo</h3>
-                        <a href="" class="btn-cartoon mt-3 animate__animated animate__fadeInUp">Saiba Mais</a>
-                    </div>
-                </div>
-                <div class="product-offer mb-30" style="height: 200px;">
-                    <img class="img-fluid" src="img/bg-verde.jpg" alt="">
-                    <div class="offer-text">
-                        <h6 class="text-white text-uppercase">Save 20%</h6>
-                        <h3 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Special Offer</h3>
-                        <a href="" class="btn-cartoon mt-3 animate__animated animate__fadeInUp">Shop Now</a>
-                    </div>
-                </div>
+          </div>
+
+          <div class="carousel-item position-relative" style="height: 430px;">
+            <img class="position-absolute w-100 h-100" src="assets/img/carousel/bg-verde.jpg" style="object-fit: cover;">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+              <div class="p-3" style="max-width: 700px;">
+                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Agendas Personalizadas</h1>
+                <a class="btn-cartoon mt-3 animate__animated animate__fadeInUp" href="#agenda">Conheça</a>
+              </div>
             </div>
+          </div>
+
+          <div class="carousel-item position-relative" style="height: 430px;">
+            <img class="position-absolute w-100 h-100" src="assets/img/carousel/bg-verde.jpg" style="object-fit: cover;">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+              <div class="p-3" style="max-width: 700px;">
+                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Cadernos Personalizados</h1>
+                <a class="btn-cartoon mt-3 animate__animated animate__fadeInUp" href="#">Orçamento</a>
+              </div>
+            </div>
+          </div>
         </div>
+
+      </div>
     </div>
+  </div>
+</div>
 <!-- Carousel End -->
+
 
     <!-- Hero Section 
     <section id="hero" class="hero section dark-background">-->
-     <section class="herohome section">
+     <section class="herohome section" id="produtos">
       <!--<img src="assets/img/profile/profile-bg-5.webp" alt="" data-aos="fade-in">-->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -133,11 +107,11 @@
           <div class="col-lg-8 text-center">
             <h2>Aimê Personalizados</h2>
             <p class="text-muted">Fazemos com <span class="typed" data-typed-items="carinho, dedicação, atenção aos detalhes, amor em cada página"></span><span class="typed-cursor" aria-hidden="true"></span></p>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
-</section><!-- /Hero Section -->
+    </section><!-- /Hero Section -->
 
 <!-- About Section -->
 <section id="about" class="about section">
@@ -154,9 +128,9 @@
     <span class="subtitle">Portfolio</span>
     <h2>Portfolio</h2>
     <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
-</div><!-- End Section Title -->
+  </div><!-- End Section Title -->
 
-<div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
     <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
       <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
@@ -165,9 +139,9 @@
         <li data-filter=".filter-digital">Digital</li>
         <li data-filter=".filter-strategy">Strategy</li>
         <li data-filter=".filter-development">Development</li>
-    </ul>
+      </ul>
 
-    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-creative">
           <div class="portfolio-card">
             <div class="portfolio-image-container">
@@ -176,188 +150,188 @@
                 <div class="portfolio-info">
                   <span class="project-category">Creative Design</span>
                   <h4>Visual Identity System</h4>
-              </div>
-              <div class="portfolio-actions">
+                </div>
+                <div class="portfolio-actions">
                   <a href="assets/img/portfolio/portfolio-1.webp" class="glightbox portfolio-link">
                     <i class="bi bi-plus-lg"></i>
-                </a>
-                <a href="#" class="portfolio-details">
+                  </a>
+                  <a href="#" class="portfolio-details">
                     <i class="bi bi-arrow-right"></i>
-                </a>
+                  </a>
+                </div>
+              </div>
             </div>
+            <div class="portfolio-meta">
+              <div class="project-tags">
+                <span class="tag">Branding</span>
+                <span class="tag">Identity</span>
+              </div>
+              <div class="project-year">2024</div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div class="portfolio-meta">
-      <div class="project-tags">
-        <span class="tag">Branding</span>
-        <span class="tag">Identity</span>
-    </div>
-    <div class="project-year">2024</div>
-</div>
-</div>
-</div>
 
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-digital">
-  <div class="portfolio-card">
-    <div class="portfolio-image-container">
-      <img src="assets/img/portfolio/portfolio-2.webp" alt="Digital Project" class="img-fluid" loading="lazy">
-      <div class="portfolio-overlay">
-        <div class="portfolio-info">
-          <span class="project-category">Digital Experience</span>
-          <h4>Interactive Web Platform</h4>
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-digital">
+          <div class="portfolio-card">
+            <div class="portfolio-image-container">
+              <img src="assets/img/portfolio/portfolio-2.webp" alt="Digital Project" class="img-fluid" loading="lazy">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <span class="project-category">Digital Experience</span>
+                  <h4>Interactive Web Platform</h4>
+                </div>
+                <div class="portfolio-actions">
+                  <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox portfolio-link">
+                    <i class="bi bi-plus-lg"></i>
+                  </a>
+                  <a href="#" class="portfolio-details">
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-meta">
+              <div class="project-tags">
+                <span class="tag">Web Design</span>
+                <span class="tag">Development</span>
+              </div>
+              <div class="project-year">2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-strategy">
+          <div class="portfolio-card">
+            <div class="portfolio-image-container">
+              <img src="assets/img/portfolio/portfolio-3.webp" alt="Strategy Project" class="img-fluid" loading="lazy">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <span class="project-category">Brand Strategy</span>
+                  <h4>Market Positioning</h4>
+                </div>
+                <div class="portfolio-actions">
+                  <a href="assets/img/portfolio/portfolio-3.webp" class="glightbox portfolio-link">
+                    <i class="bi bi-plus-lg"></i>
+                  </a>
+                  <a href="#" class="portfolio-details">
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-meta">
+              <div class="project-tags">
+                <span class="tag">Strategy</span>
+                <span class="tag">Consulting</span>
+              </div>
+              <div class="project-year">2023</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
+          <div class="portfolio-card">
+            <div class="portfolio-image-container">
+              <img src="assets/img/portfolio/portfolio-4.webp" alt="Development Project" class="img-fluid" loading="lazy">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <span class="project-category">Full Stack</span>
+                  <h4>Custom Application</h4>
+                </div>
+                <div class="portfolio-actions">
+                  <a href="assets/img/portfolio/portfolio-4.webp" class="glightbox portfolio-link">
+                    <i class="bi bi-plus-lg"></i>
+                  </a>
+                  <a href="#" class="portfolio-details">
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-meta">
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">Node.js</span>
+              </div>
+              <div class="project-year">2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-creative">
+          <div class="portfolio-card">
+            <div class="portfolio-image-container">
+              <img src="assets/img/portfolio/portfolio-5.webp" alt="Creative Project" class="img-fluid" loading="lazy">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <span class="project-category">Art Direction</span>
+                  <h4>Campaign Design</h4>
+                </div>
+                <div class="portfolio-actions">
+                  <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox portfolio-link">
+                    <i class="bi bi-plus-lg"></i>
+                  </a>
+                  <a href="#" class="portfolio-details">
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-meta">
+              <div class="project-tags">
+                <span class="tag">Creative</span>
+                <span class="tag">Campaign</span>
+              </div>
+              <div class="project-year">2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-digital">
+          <div class="portfolio-card">
+            <div class="portfolio-image-container">
+              <img src="assets/img/portfolio/portfolio-6.webp" alt="Digital Project" class="img-fluid" loading="lazy">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <span class="project-category">Digital Product</span>
+                  <h4>Mobile Experience</h4>
+                </div>
+                <div class="portfolio-actions">
+                  <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox portfolio-link">
+                    <i class="bi bi-plus-lg"></i>
+                  </a>
+                  <a href="#" class="portfolio-details">
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-meta">
+              <div class="project-tags">
+                <span class="tag">Mobile</span>
+                <span class="tag">UI/UX</span>
+              </div>
+              <div class="project-year">2023</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="portfolio-actions">
-          <a href="assets/img/portfolio/portfolio-2.webp" class="glightbox portfolio-link">
-            <i class="bi bi-plus-lg"></i>
-        </a>
-        <a href="#" class="portfolio-details">
-            <i class="bi bi-arrow-right"></i>
-        </a>
-    </div>
-</div>
-</div>
-<div class="portfolio-meta">
-  <div class="project-tags">
-    <span class="tag">Web Design</span>
-    <span class="tag">Development</span>
-</div>
-<div class="project-year">2024</div>
-</div>
-</div>
-</div>
 
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-strategy">
-  <div class="portfolio-card">
-    <div class="portfolio-image-container">
-      <img src="assets/img/portfolio/portfolio-3.webp" alt="Strategy Project" class="img-fluid" loading="lazy">
-      <div class="portfolio-overlay">
-        <div class="portfolio-info">
-          <span class="project-category">Brand Strategy</span>
-          <h4>Market Positioning</h4>
+    </div>
+
+    <div class="portfolio-bottom" data-aos="fade-up" data-aos-delay="400">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h3>Like what you see?</h3>
+          <p>Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="#contact" class="btn btn-accent">Let's Work Together</a>
+        </div>
       </div>
-      <div class="portfolio-actions">
-          <a href="assets/img/portfolio/portfolio-3.webp" class="glightbox portfolio-link">
-            <i class="bi bi-plus-lg"></i>
-        </a>
-        <a href="#" class="portfolio-details">
-            <i class="bi bi-arrow-right"></i>
-        </a>
     </div>
-</div>
-</div>
-<div class="portfolio-meta">
-  <div class="project-tags">
-    <span class="tag">Strategy</span>
-    <span class="tag">Consulting</span>
-</div>
-<div class="project-year">2023</div>
-</div>
-</div>
-</div>
 
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-development">
-  <div class="portfolio-card">
-    <div class="portfolio-image-container">
-      <img src="assets/img/portfolio/portfolio-4.webp" alt="Development Project" class="img-fluid" loading="lazy">
-      <div class="portfolio-overlay">
-        <div class="portfolio-info">
-          <span class="project-category">Full Stack</span>
-          <h4>Custom Application</h4>
-      </div>
-      <div class="portfolio-actions">
-          <a href="assets/img/portfolio/portfolio-4.webp" class="glightbox portfolio-link">
-            <i class="bi bi-plus-lg"></i>
-        </a>
-        <a href="#" class="portfolio-details">
-            <i class="bi bi-arrow-right"></i>
-        </a>
-    </div>
-</div>
-</div>
-<div class="portfolio-meta">
-  <div class="project-tags">
-    <span class="tag">React</span>
-    <span class="tag">Node.js</span>
-</div>
-<div class="project-year">2024</div>
-</div>
-</div>
-</div>
-
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-creative">
-  <div class="portfolio-card">
-    <div class="portfolio-image-container">
-      <img src="assets/img/portfolio/portfolio-5.webp" alt="Creative Project" class="img-fluid" loading="lazy">
-      <div class="portfolio-overlay">
-        <div class="portfolio-info">
-          <span class="project-category">Art Direction</span>
-          <h4>Campaign Design</h4>
-      </div>
-      <div class="portfolio-actions">
-          <a href="assets/img/portfolio/portfolio-5.webp" class="glightbox portfolio-link">
-            <i class="bi bi-plus-lg"></i>
-        </a>
-        <a href="#" class="portfolio-details">
-            <i class="bi bi-arrow-right"></i>
-        </a>
-    </div>
-</div>
-</div>
-<div class="portfolio-meta">
-  <div class="project-tags">
-    <span class="tag">Creative</span>
-    <span class="tag">Campaign</span>
-</div>
-<div class="project-year">2024</div>
-</div>
-</div>
-</div>
-
-<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-digital">
-  <div class="portfolio-card">
-    <div class="portfolio-image-container">
-      <img src="assets/img/portfolio/portfolio-6.webp" alt="Digital Project" class="img-fluid" loading="lazy">
-      <div class="portfolio-overlay">
-        <div class="portfolio-info">
-          <span class="project-category">Digital Product</span>
-          <h4>Mobile Experience</h4>
-      </div>
-      <div class="portfolio-actions">
-          <a href="assets/img/portfolio/portfolio-6.webp" class="glightbox portfolio-link">
-            <i class="bi bi-plus-lg"></i>
-        </a>
-        <a href="#" class="portfolio-details">
-            <i class="bi bi-arrow-right"></i>
-        </a>
-    </div>
-</div>
-</div>
-<div class="portfolio-meta">
-  <div class="project-tags">
-    <span class="tag">Mobile</span>
-    <span class="tag">UI/UX</span>
-</div>
-<div class="project-year">2023</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-
-<div class="portfolio-bottom" data-aos="fade-up" data-aos-delay="400">
-  <div class="row align-items-center">
-    <div class="col-lg-8">
-      <h3>Like what you see?</h3>
-      <p>Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
   </div>
-  <div class="col-lg-4 text-lg-end">
-      <a href="#contact" class="btn btn-accent">Let's Work Together</a>
-  </div>
-</div>
-</div>
-
-</div>
 
 </section><!-- /Portfolio Section -->
 
@@ -369,9 +343,9 @@
     <span class="subtitle">Contact</span>
     <h2>Contact</h2>
     <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
-</div><!-- End Section Title -->
+  </div><!-- End Section Title -->
 
-<div class="container">
+  <div class="container">
 
     <div class="row gy-4">
 
@@ -379,70 +353,70 @@
         <div class="info-item">
           <div class="icon-wrapper">
             <i class="bi bi-geo-alt"></i>
-        </div>
-        <div>
+          </div>
+          <div>
             <h3>Address</h3>
             <p>2847 Oak Street, San Francisco, CA 94102</p>
+          </div>
         </div>
+
+        <div class="info-item">
+          <div class="icon-wrapper">
+            <i class="bi bi-telephone"></i>
+          </div>
+          <div>
+            <h3>Call Me</h3>
+            <p>+1 (555) 234-5678</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon-wrapper">
+            <i class="bi bi-envelope"></i>
+          </div>
+          <div>
+            <h3>Email Me</h3>
+            <p>alex@example.com</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-8">
+        <form action="forms/contact.php" method="post" class="php-email-form">
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+            </div>
+
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+            </div>
+
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <button type="submit">Send Message</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
     </div>
-
-    <div class="info-item">
-      <div class="icon-wrapper">
-        <i class="bi bi-telephone"></i>
-    </div>
-    <div>
-        <h3>Call Me</h3>
-        <p>+1 (555) 234-5678</p>
-    </div>
-</div>
-
-<div class="info-item">
-  <div class="icon-wrapper">
-    <i class="bi bi-envelope"></i>
-</div>
-<div>
-    <h3>Email Me</h3>
-    <p>alex@example.com</p>
-</div>
-</div>
-
-</div>
-
-<div class="col-lg-8">
-    <form action="forms/contact.php" method="post" class="php-email-form">
-      <div class="row gy-4">
-
-        <div class="col-md-6">
-          <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-      </div>
-
-      <div class="col-md-6">
-          <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-      </div>
-
-      <div class="col-md-12">
-          <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-      </div>
-
-      <div class="col-md-12">
-          <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-      </div>
-
-      <div class="col-md-12 text-center">
-          <div class="loading">Loading</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Your message has been sent. Thank you!</div>
-
-          <button type="submit">Send Message</button>
-      </div>
 
   </div>
-</form>
-</div>
-
-</div>
-
-</div>
 
 </section><!-- /Contact Section -->
 
@@ -514,10 +488,10 @@ document.addEventListener("contextmenu", e => e.preventDefault());
 
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
+        }
       }
-  }
     }, 600); // intervalo ajustável
-});
+  });
 </script>
 
 </body>

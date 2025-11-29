@@ -11,7 +11,7 @@ async function loadImages() {
     let loaded = [];
 
     for (let i = 1; i <= 500; i++) {
-        const path = `img/gallery/${i}.jpg`;
+        const path = `assets/img/gallery/${i}.jpg`;
         const img = new Image();
         img.src = path;
 
