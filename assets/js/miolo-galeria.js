@@ -131,10 +131,4 @@ document.addEventListener("galeriaMioloCarregada", () => {
     });
 });
 
-// ESC fecha
-document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-        fecharModalModelos();
-        fecharGaleria();
-    }
-});
+

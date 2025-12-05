@@ -446,30 +446,81 @@
 <!-- Main JS File -->
 <script src="assets/js/main.js"></script>
 
-<!-- Componentes externos -->
+<!-- Containers para componentes carregados -->
 <div id="sidecart-container"></div>
 <div id="modal-modelos-container"></div>
+<div id="modal-planner-container"></div>
 <div id="galeria-miolo-container"></div>
+<div id="galeria-planner-container"></div>
 
-<!-- Carregamento dos componentes -->
+<!-- Carregamento de componentes (PRECISA vir antes de tudo que depende deles) -->
+<script src="assets/js/load-layout.js"></script>
 <script src="assets/js/load-components.js"></script>
+
+<!-- Só carregue scripts que inicializam GALERIAS depois dos componentes -->
 <script src="assets/js/miolo-galeria.js"></script>
 
-<!-- Bibliotecas -->
+<!-- Bibliotecas extras -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 <script src="assets/lib/easing/easing.min.js"></script>
 <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
 
-<!-- Carrinho -->
+<!-- Sistema de carrinho -->
 <script src="assets/js/cart.js"></script>
 
-<!-- Scripts separados -->
+<!-- Scripts separados (ORDENADOS CORRETAMENTE) -->
 <script src="assets/js/busca.js"></script>
 <script src="assets/js/miolo-modal.js"></script>
+
+<!-- SCRIPTS QUE DEPENDEM DO LOAD-COMPONENTS (precisam vir DEPOIS) -->
+<script src="assets/js/planner-modal.js"></script>
+<script src="assets/js/planner.js"></script>
 <script src="assets/js/sidecart.js"></script>
 <script src="assets/js/produtos.js"></script>
 <script src="assets/js/modal.js"></script>
+
+<script>
+document.addEventListener("keydown", function (e) {
+  if (e.key !== "Escape") return;
+
+  // lista de itens que queremos fechar: cada item tem possíveis seletores e o nome da função de fechar
+  const targets = [
+    {selectors: ["#modal-planner", "#modalPlanner", ".modal-planner"], closeFn: "fecharModalPlanner", altHide: true},
+    {selectors: ["#galeria-planner", "#galeriaPlanner", ".galeria-planner"], closeFn: "fecharGaleriaPlanner", altHide: true},
+    {selectors: ["#modal-modelos", "#modalModelos", ".modal-modelos"], closeFn: "fecharModalModelos", altHide: true},
+    {selectors: ["#galeria-miolo", "#galeriaMiolo", ".galeria-miolo"], closeFn: "fecharGaleria", altHide: true},
+  ];
+
+  targets.forEach(t => {
+    for (const sel of t.selectors) {
+      const el = document.querySelector(sel);
+      if (!el) continue;
+
+      // considera aberto se tem classe .open ou está visível (display diferente de none / offsetParent)
+      const isOpen = el.classList.contains("open") ||
+                     (el.style && el.style.display && el.style.display !== "none") ||
+                     (window.getComputedStyle && window.getComputedStyle(el).display !== "none") ||
+                     (el.offsetParent !== null);
+
+      if (!isOpen) continue;
+
+      // tenta chamar função de fechamento se existir
+      if (t.closeFn && typeof window[t.closeFn] === "function") {
+        try { window[t.closeFn](); }
+        catch (err) { console.warn("Erro ao chamar", t.closeFn, err); }
+      } else if (t.altHide) {
+        // fallback: apenas esconder o elemento
+        try { el.style.display = "none"; el.classList.remove("open"); }
+        catch (err) { console.warn("Não consegui esconder", sel, err); }
+      }
+
+      // se achou e tratou, não precisa checar outros seletores desse target
+      break;
+    }
+  });
+});
+</script>
 
 
 <!-- bloqueio cllique direito 

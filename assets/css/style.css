@@ -717,6 +717,58 @@ body {
   box-shadow: none !important;
 }
 
+.galeria-planner-container {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  touch-action: none;
+}
+
+.galeria-planner-container img {
+  max-width: 100%;
+  max-height: 90vh; /* 90% da altura visível da tela */
+  border-radius: 8px;
+  user-select: none;
+  object-fit: contain; /* mantém proporção sem cortar */
+  touch-action: none;
+}
+
+
+/* Botão <> Galeria */
+.galeria-planner-container button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /*background: rgba(0,0,0,0.6);*/
+  background: none;
+  color: #1d3a45;
+  border: none;
+  font-size: 50px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.2s;
+}
+
+.galeria-planner-container button:hover {
+  background: #56626b;
+}
+
+.galeria-planner-container .prev { left: 0px; }
+.galeria-planner-container .next { right: 0px; }
+
+.galeria-planner-container .prev,
+.galeria-planner-container .next {
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 /* SETAS */
 /* Esquerda e direita */
 .nav.prev {
@@ -783,6 +835,33 @@ body {
   box-shadow: 8px 8px 0 #000 !important;         /* sombra deslocada mais para baixo */
   background: #fff !important;
 }
+
+
+.galeria-planner-container .escolher-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80%;
+  background: #b3f3f0 !important;
+  border: 3px solid #000 !important;
+  color: #000 !important;
+  font-weight: 900;
+  font-size: 16px !important;
+  padding: 12px 18px !important;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 #000 !important;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s;
+  z-index: 2;
+}
+
+.galeria-planner-container .escolher-btn:hover {
+  transform: translateX(-50%) translateY(-4px);
+  box-shadow: 8px 8px 0 #000 !important;
+  background: #fff !important;
+}
+
+
+
 
 .detalhes-produto {
     display: none;

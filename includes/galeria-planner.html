@@ -1,0 +1,16 @@
+<!-- GALERIA DO PLANNER -->
+<div id="galeriaPlanner" class="galeria-overlay" style="display:none;">
+    <span class="close" onclick="fecharGaleriaPlanner()">&times;</span>
+
+    <div class="galeria-planner-container">
+        <button class="prev" onclick="mudarPlannerImagem(-1)">&#10094;</button>
+        <img id="galeriaPlannerImagem" src="" alt="Galeria Planner">
+        <button class="next" onclick="mudarPlannerImagem(1)">&#10095;</button>
+        
+        <button id="btnEscolherPlanner" class="escolher-btn" onclick="escolherPlannerAtual()">
+            <i class="fa fa-shopping-cart mr-2"></i>Escolher
+        </button>
+    </div>
+
+    <div id="toast"></div>
+</div>

@@ -2076,14 +2076,14 @@ section1,
 }
 
 .portfolio .portfolio-filters li:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: #b3f3f0;
+  border-color: #b3f3f0;
 }
 
 .portfolio .portfolio-filters li.filter-active {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  border-color: var(--accent-color);
+  background-color: #b3f3f0;
+  color: #1d3a45;
+  border-color: #b3f3f0;
 }
 
 .portfolio .portfolio-card {
@@ -2095,7 +2095,7 @@ section1,
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4/6;
 }
 
 .portfolio .portfolio-card .portfolio-image-container img {
@@ -2129,7 +2129,7 @@ section1,
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: #000;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 4px 10px;
   border-radius: 4px;
@@ -2188,8 +2188,8 @@ section1,
   font-weight: 500;
   padding: 4px 10px;
   border-radius: 12px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
+  background-color: #1d3a45;
+  color: #b3f3f0;
   text-transform: uppercase;
   letter-spacing: 0.3px;
 }
@@ -2229,8 +2229,8 @@ section1,
 .portfolio .portfolio-bottom .btn-accent {
   display: inline-block;
   padding: 12px 28px;
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+  background-color: #1d3a45;
+  color: #b3f3f0;
   border-radius: 6px;
   font-weight: 600;
   font-size: 14px;
@@ -2239,9 +2239,9 @@ section1,
 }
 
 .portfolio .portfolio-bottom .btn-accent:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 10%);
+  background-color: color-mix(in srgb, #1d3a45, black 10%)
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 60%);
+  box-shadow: 0 5px 15px rgba(179, 243, 240, 0.4);
 }
 
 @media (max-width: 992px) {
