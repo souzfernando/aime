@@ -16,7 +16,7 @@ const produtos = {
         "agenda-1": {
             descricaoCompleta: `
             ✔ Formato: 15x21cm<br>
-✔ 364 páginas – papel offset 75g premium<br>
+✔ 366 páginas – papel offset 75g premium<br>
 ✔ Capa dura personalizada com design exclusivo<br>
 ✔ Miolos prontos à escolha<br>
 ✔ Encadernação wire-o resistente<br>

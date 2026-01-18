@@ -365,9 +365,6 @@ body {
     align-items: center !important;
     justify-content: center !important;
 
-    width: 55px !important;    /* 👈 mesmo valor */
-    height: 40px !important;   /* 👈 vira círculo matemático */
-
     padding: 0 !important;     /* 👈 remove ovalizações */
     margin: 0 !important;
 
@@ -403,13 +400,13 @@ body {
 .cart-top-aligned i {
     font-size: 20px !important;
     line-height: 1 !important;
-    color: #000;
+    color: #fff;
     transition: 0.2s ease;
 }
 
 
 .cart-top-aligned:hover i {
-    color: #fff !important;
+    color: #444 !important;
 }
 
 .cart-top-aligned:hover {
@@ -507,6 +504,32 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* sombra leve */
 }
 
+.thumb-wrapper {
+    position: relative;
+}
+
+.tap-icon {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.65);
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.tap-icon img {
+   width: 33px !important;
+    height: auto !important;
+    display: block;
+}
+
+.modelo-item:hover .tap-icon {
+    opacity: 1;
+}
+
+
+
 /* Modal da galeria por cima de tudo */
 #modal {
     z-index: 99999 !important;
@@ -582,8 +605,10 @@ body {
 
 
 .modal img {
-    max-width: 100%;
+    max-width: 90vw;   /* largura máxima = 90% da tela */
+    width: auto;
     height: auto;
+    object-fit: contain;
     border-radius: 10px;
 }
 
