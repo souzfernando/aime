@@ -173,8 +173,6 @@ body{
 ---------------------------------- */
 .modal img {
   pointer-events: auto;      /* 🔑 devolve interação */
-  width: auto !important;    /* 🔑 mata width:100% global */
-  height: auto !important;
   max-width: 90vw;           /* 🔑 limite real de tela */
   max-height: 90vh;
   object-fit: contain;

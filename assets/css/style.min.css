@@ -7697,9 +7697,7 @@ body{
   margin-top:100px;
   opacity:0
 }
-.product-item:hover{
-  box-shadow:0 0 30px #ddd
-}
+
 .product-item:hover .product-action{
   background:hsla(0, 0%, 100%, .7)
 }

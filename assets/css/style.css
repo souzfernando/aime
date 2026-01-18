@@ -1337,6 +1337,22 @@ a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus
 }
 
 
+/* CONTAINER DOS PRODUTOS 3 colunas
+.row1 {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.row1 .produto {
+  width: 33.33%;
+  padding: 15px;
+  box-sizing: border-box;
+} */
+
 /* CONTAINER DOS PRODUTOS */
 .row1 {
   display: flex;
@@ -1347,9 +1363,16 @@ a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus
   justify-content: center;
 }
 
-/* CADA PRODUTO */
+/* CADA PRODUTO — 2 COLUNAS */
 .row1 .produto {
-  width: 33.33%;
+  width: 50%;          /* <<< aqui */
   padding: 15px;
   box-sizing: border-box;
 }
+
+.produto > section {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 0;
+  }
+
