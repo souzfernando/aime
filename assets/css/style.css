@@ -1353,7 +1353,7 @@ a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus
   box-sizing: border-box;
 } */
 
-/* CONTAINER DOS PRODUTOS */
+/* CONTAINER DOS PRODUTOS *
 .row1 {
   display: flex;
   flex-wrap: wrap;
@@ -1363,11 +1363,25 @@ a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus
   justify-content: center;
 }
 
-/* CADA PRODUTO — 2 COLUNAS */
+/* CADA PRODUTO — 2 COLUNAS *
 .row1 .produto {
-  width: 50%;          /* <<< aqui */
+  width: 50%;          
   padding: 15px;
   box-sizing: border-box;
+}
+
+ */
+
+/* CONTAINER PROUTOS*/
+.row1 {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.row1 .produto {
+  width: 100% !important;
+  position: static !important;
 }
 
 .produto > section {
@@ -1375,4 +1389,59 @@ a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus
     margin: 0 !important;
     height: 0;
   }
+
+
+  /* SIDEBAR */
+.filter-sidebar {
+  background: #2f2f2f;
+  border-radius: 16px;
+  padding: 24px 0;
+  max-width: 260px;
+}
+
+/* LISTA */
+.portfolio-filters {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ITENS */
+.portfolio-filters li {
+  color: #fff;
+  font-weight: 500;
+  padding: 14px 32px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s;
+}
+
+/* HOVER */
+.portfolio-filters li:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* ITEM ATIVO */
+.portfolio-filters li.filter-active {
+  background: rgba(255,255,255,0.08);
+}
+
+/* BARRA BRANCA LATERAL */
+.portfolio-filters li.filter-active::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 22px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* sidebar não esticar junto com a row */
+.filter-sidebar {
+  align-self: flex-start;
+}
+
 
