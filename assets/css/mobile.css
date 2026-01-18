@@ -90,3 +90,44 @@
   }
 
 }
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  /* Sidebar ocupa 100% da largura mas alinha o conteúdo ao centro */
+  .filter-sidebar {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 24px; /* centraliza e adiciona espaço embaixo */
+    border-radius: 12px;
+    padding: 16px 0;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+  }
+
+  /* Lista ocupa só o necessário e fica centralizada */
+  .portfolio-filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centraliza os itens da lista */
+  }
+
+  /* Itens ocupam largura limitada e centralizados */
+  .portfolio-filters li {
+    width: auto; /* largura automática */
+    min-width: 180px; /* opcional, pra não ficarem muito pequenos */
+    padding: 12px 24px;
+    box-sizing: border-box;
+    text-align: center; /* centraliza o texto */
+  }
+
+  /* Barra branca lateral ajustada para mobile */
+  .portfolio-filters li.filter-active::before {
+    left: 50%; /* coloca no centro do item */
+    transform: translateX(-50%) translateY(-50%); /* centraliza perfeitamente */
+    width: 3px;
+    height: 18px;
+  }
+}
+

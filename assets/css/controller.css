@@ -167,8 +167,6 @@ body{
 }
 
 
-
-
 /* ---------------------------------
    EXCEÇÃO — MODAL / LIGHTBOX
 ---------------------------------- */
@@ -228,3 +226,30 @@ body{
   justify-content: center;
 }
 
+/* MOBILE HERO */
+@media (max-width: 768px) {
+  .hero .row {
+    display: flex;
+    flex-direction: column; /* empilha os elementos */
+  }
+
+  /* Reordena a imagem para aparecer primeiro */
+  .hero .col-lg-6:first-child {
+    order: 2; /* texto fica depois */
+  }
+
+  .hero .col-lg-6:last-child {
+    order: 1; /* imagem aparece primeiro */
+    margin-bottom: 20px; /* espaço entre imagem e texto */
+  }
+
+  /* Centraliza imagem e texto */
+  .hero .hero-text,
+  .hero .hero-visual {
+    text-align: center;
+  }
+
+  .hero .profile-container {
+    margin: 0 auto;
+  }
+}
