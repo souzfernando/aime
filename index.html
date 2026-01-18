@@ -1210,6 +1210,8 @@ document.addEventListener('DOMContentLoaded', () => {
     percentPosition: true
   });
 
+  const grid = document.querySelector('.row1');
+
   document.querySelectorAll('.portfolio-filters li').forEach(filter => {
     filter.addEventListener('click', () => {
 
@@ -1222,7 +1224,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       iso.layout();
 
-      // 🔥 ESSENCIAL PARA AOS FUNCIONAR
       setTimeout(() => {
         AOS.refreshHard();
       }, 300);
@@ -1230,14 +1231,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  iso.on('arrangeComplete', () => {
+    grid.classList.toggle('single', iso.filteredItems.length === 1);
+  });
+
 });
 </script>
-
-
-
-
-
-
 
 
 

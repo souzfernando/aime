@@ -1444,4 +1444,9 @@ a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus
   align-self: flex-start;
 }
 
+/* REMOVE QUALQUER ANIMAÇÃO DO ISOTOPE */
+.isotope-container,
+.isotope-item {
+  transition: none !important;
+}
 

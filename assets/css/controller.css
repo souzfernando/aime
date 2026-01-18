@@ -160,12 +160,13 @@ body{
 .isotope-container {
     display: grid !important; /* força grid em vez de masonry bagunçar */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
 }
 
 .portfolio-item {
     margin-bottom: 10px !important;
 }
+
+
 
 
 /* ---------------------------------
