@@ -365,6 +365,9 @@ body {
     align-items: center !important;
     justify-content: center !important;
 
+    width: 55px !important;    /* 👈 mesmo valor */
+    height: 40px !important;   /* 👈 vira círculo matemático */
+
     padding: 0 !important;     /* 👈 remove ovalizações */
     margin: 0 !important;
 
@@ -400,13 +403,13 @@ body {
 .cart-top-aligned i {
     font-size: 20px !important;
     line-height: 1 !important;
-    color: #fff;
+    color: #000;
     transition: 0.2s ease;
 }
 
 
 .cart-top-aligned:hover i {
-    color: #444 !important;
+    color: #fff !important;
 }
 
 .cart-top-aligned:hover {
@@ -605,10 +608,8 @@ body {
 
 
 .modal img {
-    max-width: 90vw;   /* largura máxima = 90% da tela */
-    width: auto;
+    max-width: 100%;
     height: auto;
-    object-fit: contain;
     border-radius: 10px;
 }
 
@@ -834,6 +835,58 @@ body {
   cursor: pointer;
   z-index: 1001;
 }
+
+
+.galeria-container .escolher-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);              /* centraliza */
+  top: 80%;
+  background: #b3f3f0 !important;
+  border: 3px solid #000 !important;
+  color: #000 !important;
+  font-weight: 900;
+  font-size: 16px !important;          /* diminui o tamanho da fonte */
+  padding: 12px 18px !important;        /* diminui largura e altura do botão */
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 #000 !important;    /* sombra inicial */
+  transition: transform .15s ease, box-shadow .15s ease, background .15s;
+  z-index: 2;
+}
+
+/* no hover: o botão sobe (translateY negativo) e a sombra aumenta o offset,
+   assim a sombra parece "ficar atrás" do botão (melhor efeito visual) */
+.galeria-container .escolher-btn:hover {
+  transform: translateX(-50%) translateY(-4px);  /* sobe 4px */
+  box-shadow: 8px 8px 0 #000 !important;         /* sombra deslocada mais para baixo */
+  background: #fff !important;
+}
+
+
+.galeria-planner-container .escolher-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80%;
+  background: #b3f3f0 !important;
+  border: 3px solid #000 !important;
+  color: #000 !important;
+  font-weight: 900;
+  font-size: 16px !important;
+  padding: 12px 18px !important;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 #000 !important;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s;
+  z-index: 2;
+}
+
+.galeria-planner-container .escolher-btn:hover {
+  transform: translateX(-50%) translateY(-4px);
+  box-shadow: 8px 8px 0 #000 !important;
+  background: #fff !important;
+}
+
+
 
 
 .detalhes-produto {
@@ -1241,14 +1294,14 @@ a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus
   margin-top: 6px;
 }
 
-/* hover do botão /
+/* hover do botão */
 .btn-cartoon:hover {
   transform: translate(-3px, -3px);
   box-shadow: 7px 7px 0 #000;
   background: #fff;
 }
 
-/* BOTÃO CARTOON /
+/* BOTÃO CARTOON */
 .btn-cartoon {
   background: #b3f3f0 !important;
   border: 3px solid #000 !important;
@@ -1264,7 +1317,7 @@ a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus
 }
 
 
-/* animação cartoon ao passar o mouse /
+/* animação cartoon ao passar o mouse */
 .btn-cartoon:hover {
   transform: translate(-3px, -3px);
   box-shadow: 7px 7px 0 #000;
@@ -1279,13 +1332,13 @@ a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus
   background: #fff !important;
 }
 
-/* ícone dentro do botão também preto /
+/* ícone dentro do botão também preto */
 .btn-cartoon i {
   color: #1d3a45 !important;
 }
 
 
-/* CONTAINER DOS PRODUTOS 3 colunas
+/* CONTAINER DOS PRODUTOS */
 .row1 {
   display: flex;
   flex-wrap: wrap;
@@ -1295,260 +1348,9 @@ a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus
   justify-content: center;
 }
 
+/* CADA PRODUTO */
 .row1 .produto {
   width: 33.33%;
   padding: 15px;
   box-sizing: border-box;
-} */
-
-/* CONTAINER DOS PRODUTOS *
-.row1 {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1140px;
-  width: 100%;
-  margin: 0 auto;
-  justify-content: center;
-}
-
-/* CADA PRODUTO — 2 COLUNAS *
-.row1 .produto {
-  width: 50%;          
-  padding: 15px;
-  box-sizing: border-box;
-}
-
-.galeria-container .escolher-btn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);              
-  top: 80%;
-  background: #b3f3f0 !important;
-  border: 3px solid #000 !important;
-  color: #000 !important;
-  font-weight: 900;
-  font-size: 16px !important;          
-  padding: 12px 18px !important;        
-  border-radius: 8px;
-  box-shadow: 4px 4px 0 #000 !important;    
-  transition: transform .15s ease, box-shadow .15s ease, background .15s;
-  z-index: 2;
-}
-
-
-.galeria-container .escolher-btn:hover {
-  transform: translateX(-50%) translateY(-4px);  
-  box-shadow: 8px 8px 0 #000 !important;         
-  background: #fff !important;
-}
-
-
-.galeria-planner-container .escolher-btn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 80%;
-  background: #b3f3f0 !important;
-  border: 3px solid #000 !important;
-  color: #000 !important;
-  font-weight: 900;
-  font-size: 16px !important;
-  padding: 12px 18px !important;
-  border-radius: 8px;
-  box-shadow: 4px 4px 0 #000 !important;
-  transition: transform .15s ease, box-shadow .15s ease, background .15s;
-  z-index: 2;
-}
-
-.galeria-planner-container .escolher-btn:hover {
-  transform: translateX(-50%) translateY(-4px);
-  box-shadow: 8px 8px 0 #000 !important;
-  background: #fff !important;
-}
-
- */
-
-
-/* BOTÃO ELEGANTE */
-.btn-cartoon {
-  background: linear-gradient(135deg, #1d3a45, #2f5870); /* azul elegante */
-  border: none;
-  color: #fff !important;
-  font-weight: 700;
-  border-radius: 25px;
-  padding: 12px 26px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  text-decoration: none !important;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* HOVER */
-.btn-cartoon:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-  background: linear-gradient(135deg, #2f5870, #1d3a45);
-  color: #fff !important;
-}
-
-/* Ícone dentro do botão */
-.btn-cartoon i {
-  color: #fff !important;
-  transition: transform 0.3s ease;
-}
-
-.btn-cartoon:hover i {
-  transform: translateX(4px);
-}
-
-/* BOTÃO ELEGANTE CENTRALIZADO */
-.galeria-container .escolher-btn,
-.galeria-planner-container .escolher-btn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 80%;
-
-  /* estilo moderno */
-  background: linear-gradient(135deg, #1d3a45, #2f5870);
-  border: none;
-  color: #fff !important;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 12px 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  z-index: 2;
-  cursor: pointer;
-  text-align: center;
-}
-
-/* HOVER */
-.galeria-container .escolher-btn:hover,
-.galeria-planner-container .escolher-btn:hover {
-  transform: translateX(-50%) translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-  background: linear-gradient(135deg, #2f5870, #1d3a45);
-  color: #fff !important;
-}
-
-/* Ícones dentro do botão (se houver) */
-.galeria-container .escolher-btn i,
-.galeria-planner-container .escolher-btn i {
-  color: #fff !important;
-  transition: transform 0.3s ease;
-}
-
-.galeria-container .escolher-btn:hover i,
-.galeria-planner-container .escolher-btn:hover i {
-  transform: translateX(3px);
-}
-
-
-
-/* CONTAINER PROUTOS*/
-.row1 {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsivo */
-}
-
-.row1 > .isotope-item {
-  box-sizing: border-box;
-  padding: 0 16px 16px 0; /* padding direito e inferior */
-}
-
-.row1 .produto {
-  width: 100% !important;
-  position: static !important;
-}
-
-.produto > section {
-    padding: 0 !important;
-    margin: 0 !important;
-    height: 0;
-  }
-
-
-  /* SIDEBAR */
-.filter-sidebar {
-  background: #2f2f2f;
-  border-radius: 16px;
-  padding: 24px 0;
-  max-width: 260px;
-}
-
-/* LISTA */
-.portfolio-filters {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* ITENS */
-.portfolio-filters li {
-  color: #fff;
-  font-weight: 500;
-  padding: 14px 32px;
-  cursor: pointer;
-  position: relative;
-  transition: background 0.3s;
-}
-
-/* HOVER */
-.portfolio-filters li:hover {
-  background: rgba(255,255,255,0.05);
-}
-
-/* ITEM ATIVO */
-.portfolio-filters li.filter-active {
-  background: rgba(255,255,255,0.08);
-}
-
-/* BARRA BRANCA LATERAL */
-.portfolio-filters li.filter-active::before {
-  content: "";
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 22px;
-  background: #fff;
-  border-radius: 2px;
-}
-
-/* sidebar não esticar junto com a row */
-.filter-sidebar {
-  align-self: flex-start;
-}
-
-/* REMOVE QUALQUER ANIMAÇÃO DO ISOTOPE */
-.isotope-container,
-.isotope-item {
-  transition: none !important;
-}
-
-.hero .background-elements .bg-circle {
-  position: absolute;
-  border-radius: 50%;
-  background: linear-gradient(
-    45deg, 
-    #1d3a45 90%, 
-    #1d3a4500 95% /* transparente do azul */
-  );
-  animation: float 6s ease-in-out infinite;
-}
-
-.hero .hero-visual .profile-container .profile-background {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 100%;
-  height: 100%;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border-radius: 300px;
-  z-index: 1;
-  display: none;
 }

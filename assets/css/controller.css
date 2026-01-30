@@ -145,7 +145,7 @@ body{
   line-height:1.5;
   color:#6c757d;
   text-align:left;
-  background-color:#333;
+  background-color:#fff
 }
 
 
@@ -160,96 +160,9 @@ body{
 .isotope-container {
     display: grid !important; /* força grid em vez de masonry bagunçar */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
 }
 
 .portfolio-item {
     margin-bottom: 10px !important;
-}
-
-
-/* ---------------------------------
-   EXCEÇÃO — MODAL / LIGHTBOX
----------------------------------- */
-.modal img {
-  pointer-events: auto;      /* 🔑 devolve interação */
-  max-width: 90vw;           /* 🔑 limite real de tela */
-  max-height: 90vh;
-  object-fit: contain;
-  display: block;
-}
-
-
-/* Container */
-.social-links {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  gap: 16px; /* mais respiro */
-}
-
-/* Links (ícones) */
-.social-links a {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  width: 40px;          /* tamanho fixo */
-  height: 40px;
-  padding: 0;
-  line-height: 1;
-  border-radius: 50%;   /* mantém o círculo bonito */
-}
-
-/* Ícones */
-.social-links i {
-  font-size: 20px;
-  line-height: 1;
-}
-
-/* Carrinho */
-.cart-top-aligned {
-  position: relative;
-}
-
-/* Badge do contador */
-.badge-counter {
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  min-width: 16px;
-  height: 16px;
-  padding: 0 4px;
-  font-size: 10px;
-  line-height: 16px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* MOBILE HERO */
-@media (max-width: 768px) {
-  .hero .row {
-    display: flex;
-    flex-direction: column; /* empilha os elementos */
-  }
-
-  /* Reordena a imagem para aparecer primeiro */
-  .hero .col-lg-6:first-child {
-    order: 2; /* texto fica depois */
-  }
-
-  .hero .col-lg-6:last-child {
-    order: 1; /* imagem aparece primeiro */
-    margin-bottom: 20px; /* espaço entre imagem e texto */
-  }
-
-  /* Centraliza imagem e texto */
-  .hero .hero-text,
-  .hero .hero-visual {
-    text-align: center;
-  }
-
-  .hero .profile-container {
-    margin: 0 auto;
-  }
 }

@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Aimê Personalizados</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
-  <!-- Favicons -->
+  <!-- Favicon -->
   <link href="assets/img/favicon.ico" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -19,6 +19,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <!-- Bibliotecas -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -26,216 +31,102 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Bibliotecas -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-  <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
-  <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
   <!-- CSS do site -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/style.min.css" rel="stylesheet">
   <link href="assets/css/mobile.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/controller.css" rel="stylesheet">
-
 </head>
 
-<body class="portfolio-details-page">
+<body class="no-scroll-modal pagina-galeria no-reopen">
+    <!-- Head Start -->
+    <div id="topo"></div>
+    <!-- Head End -->
 
-    <header id="header" class="header dark-background d-flex flex-column justify-content-center">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="header-container d-flex flex-column align-items-start">
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="/#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-          <li><a href="/#produtos"><i class="bi bi-box navicon"></i> Produtos</a></li>
-          <li><a href="/#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-          <li><a href="portfolio.html"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-          <li><a href="/#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-          <!--<li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>-->
-          <li><a href="carrinho.html"><i class="bi bi-cart navicon"></i> Carrinho</a></li>
-        </ul>
-      </nav>
-
-      <div class="social-links text-center">
-        <!-- CARRINHO (contador) -->
-        <a href="carrinho.html" class="cart-top-aligned">
-          <i class="fas fa-shopping-cart"></i>
-          <span id="cart-count-mobile" class="badge-counter">0</span>
-        </a>
-        
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <!--<a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>-->
-      </div>
-
+    <!-- GALERIA -->
+    <div class="gallery-wrapper">
+        <div class="gallery" id="gallery"></div>
     </div>
 
-  </header>
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <span id="modal-close">&times;</span>
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title dark-background">
-      <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-12">
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <!-- GALERIA -->
-              <div class="gallery-wrapper">
-                <div class="gallery" id="gallery"></div>
-              </div>
-
-              <!-- MODAL -->
-              <div id="modal" class="modal">
-                <span id="modal-close">&times;</span>
-
-                <!-- setas do carrossel -->
-                <span class="nav prev" onclick="prevImage()">&#10094;</span>
-                <img id="modal-img" alt="Imagem ampliada">
-                <span class="nav next" onclick="nextImage()">&#10095;</span>
-              </div>
-              
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Details Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+        <!-- setas do carrossel -->
+        <span class="nav prev" onclick="prevImage()">&#10094;</span>
+        <img id="modal-img" alt="Imagem ampliada">
+        <span class="nav next" onclick="nextImage()">&#10095;</span>
     </div>
 
-  </footer>
+    <!-- Footer Start -->
+    <div id="footer"></div>
+    <!-- Footer End -->
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
+<!-- Preloader -->
+<div id="preloader"></div>
 
 <!-- Vendor JS Files -->
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>
 <script src="assets/vendor/aos/aos.js"></script>
 <script src="assets/vendor/typed.js/typed.umd.js"></script>
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
-
-<!-- Containers para componentes carregados -->
+<!-- Componentes externos -->
 <div id="sidecart-container"></div>
 <div id="modal-modelos-container"></div>
-<div id="modal-planner-container"></div>
 <div id="galeria-miolo-container"></div>
-<div id="galeria-planner-container"></div>
 
-<!-- Carregamento de componentes (PRECISA vir antes de tudo que depende deles) -->
+<!-- Carregamento dos componentes -->
 <script src="assets/js/load-components.js"></script>
-
-<!-- Só carregue scripts que inicializam GALERIAS depois dos componentes -->
 <script src="assets/js/miolo-galeria.js"></script>
 
-<!-- Bibliotecas extras -->
+<!-- Bibliotecas -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 <script src="assets/lib/easing/easing.min.js"></script>
 <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
 
-<!-- Sistema de carrinho -->
+<!-- Carrinho -->
 <script src="assets/js/cart.js"></script>
 
-<!-- Scripts separados (ORDENADOS CORRETAMENTE) -->
+<!-- Scripts separados -->
 <script src="assets/js/busca.js"></script>
 <script src="assets/js/miolo-modal.js"></script>
-
-<!-- SCRIPTS QUE DEPENDEM DO LOAD-COMPONENTS (precisam vir DEPOIS) -->
-<script src="assets/js/planner-modal.js"></script>
-<script src="assets/js/planner.js"></script>
 <script src="assets/js/sidecart.js"></script>
 <script src="assets/js/produtos.js"></script>
 <script src="assets/js/modal.js"></script>
-<script src="assets/js/gallery-script.js"></script>
 
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/gallery-script.js"></script>
 
 <!-- bloqueio cllique direito 
 <script>
 document.addEventListener("contextmenu", e => e.preventDefault());
 </script>-->
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
 
     // Espera os componentes carregarem
-    setTimeout(() => {
-      const hash = window.location.hash;
+        setTimeout(() => {
+            const hash = window.location.hash;
 
-      if (hash) {
-        const el = document.querySelector(hash);
+            if (hash) {
+                const el = document.querySelector(hash);
 
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        }
-      }
+                if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                }
+            }
     }, 600); // intervalo ajustável
-  });
+    });
 </script>
 
 </body>
-
 </html>
