@@ -717,7 +717,6 @@
 /*** copyright end ***/
 
 
-.service-item .service-content-inner span:hover {
-    color: inherit !important;
-    transform: none !important;
+.service .service-item .service-content::after {
+    display: none;
 }
