@@ -3,18 +3,21 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Soluções SST & RH - Gestão Empresarial</title>
+    <title>SST & RH Solutions - Segurança do Trabalho e Recursos Humanos</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="sst, segurança do trabalho, rh, gestão de pessoas" name="keywords">
-    <meta content="Empresa especializada em SST e RH" name="description">
+    <meta content="sst, segurança do trabalho, rh, gestão de pessoas, medicina ocupacional" name="keywords">
+    <meta content="Empresa especializada em Segurança do Trabalho e Recursos Humanos, oferecendo soluções completas para sua empresa." name="description">
 
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
 
+    <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <!-- Libraries Stylesheet -->
     <link rel="stylesheet" href="lib/animate/animate.min.css"/>
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -27,25 +30,36 @@
 
 <!-- Spinner -->
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary"></div>
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;"></div>
 </div>
 
 <!-- Topbar -->
-<div class="container-fluid topbar bg-light py-2 d-none d-lg-block">
-    <div class="container d-flex justify-content-between">
-        <div>
-            <a class="text-muted small"><i class="fas fa-map-marker-alt text-primary me-2"></i>Atendimento em todo Brasil</a>
-            <a href="mailto:contato@empresa.com" class="text-muted small ms-3"><i class="fas fa-envelope text-primary me-2"></i>contato@empresa.com</a>
+<div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+    <div class="container">
+        <div class="row gx-0 align-items-center">
+            <div class="col-lg-8">
+                <div class="d-flex flex-wrap">
+                    <div class="border-end border-primary pe-3">
+                        <a class="text-muted small"><i class="fas fa-map-marker-alt text-primary me-2"></i>Atendimento em todo o Brasil</a>
+                    </div>
+                    <div class="ps-3">
+                        <a href="mailto:contato@empresa.com" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>contato@empresa.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-end">
+                <small><i class="fas fa-globe-europe text-primary me-2"></i> Português</small>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- Navbar -->
-<div class="container-fluid nav-bar">
+<div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand">
-                <h1 class="text-primary"><i class="fas fa-shield-alt me-2"></i>SST & RH</h1>
+            <a class="navbar-brand p-0">
+                <h1 class="text-primary mb-0"><i class="fas fa-shield-alt me-2"></i>SST & RH Solutions</h1>
             </a>
 
             <div class="collapse navbar-collapse">
@@ -63,94 +77,97 @@
 <!-- Carousel -->
 <div class="header-carousel owl-carousel">
     <div class="header-carousel-item bg-primary">
-        <div class="container">
+        <div class="carousel-caption container">
             <h4 class="text-white">Especialistas em SST e RH</h4>
-            <h1 class="text-white">Segurança, conformidade e gestão eficiente</h1>
-            <p class="text-white">Oferecemos soluções completas em Segurança do Trabalho e Recursos Humanos para sua empresa crescer com segurança.</p>
+            <h1 class="text-white">Segurança do Trabalho e Gestão de Pessoas</h1>
+            <p class="text-white">Garantimos conformidade com normas regulamentadoras, redução de riscos e mais produtividade.</p>
         </div>
     </div>
 
     <div class="header-carousel-item bg-primary">
-        <div class="container">
+        <div class="carousel-caption container">
             <h4 class="text-white">Gestão Inteligente</h4>
-            <h1 class="text-white">Reduza riscos e aumente produtividade</h1>
-            <p class="text-white">Cuidamos da sua equipe e dos processos legais enquanto você foca no crescimento do negócio.</p>
+            <h1 class="text-white">Cuidamos da sua empresa e da sua equipe</h1>
+            <p class="text-white">Soluções completas em SST e RH para empresas de todos os portes.</p>
         </div>
     </div>
 </div>
 
 <!-- About -->
-<div class="container py-5">
-    <h4 class="text-primary">Sobre a Empresa</h4>
-    <h1>Especialistas em SST e Recursos Humanos</h1>
-    <p>Atuamos com foco na segurança do trabalhador e na gestão estratégica de pessoas, garantindo conformidade com normas e eficiência operacional.</p>
-    <p>Nosso time é formado por profissionais qualificados prontos para atender empresas de todos os portes.</p>
+<div class="container-fluid bg-light py-5">
+    <div class="container">
+        <h4 class="text-primary">Sobre a Empresa</h4>
+        <h1>Especialistas em Segurança do Trabalho e RH</h1>
+        <p>Atuamos garantindo segurança, organização e conformidade legal para sua empresa.</p>
 
-    <p><i class="fa fa-check text-primary"></i> Adequação às normas NR</p>
-    <p><i class="fa fa-check text-primary"></i> Gestão completa de RH</p>
-    <p><i class="fa fa-check text-primary"></i> Redução de riscos trabalhistas</p>
+        <p><i class="fa fa-check text-primary"></i> Adequação às normas NR</p>
+        <p><i class="fa fa-check text-primary"></i> Gestão completa de pessoas</p>
+        <p><i class="fa fa-check text-primary"></i> Redução de riscos trabalhistas</p>
+    </div>
 </div>
 
 <!-- Services -->
 <div class="container py-5">
     <h4 class="text-primary text-center">Serviços</h4>
-    <h1 class="text-center">Soluções completas para sua empresa</h1>
+    <h1 class="text-center">Soluções completas</h1>
 
     <div class="row">
         <div class="col-md-3">
             <h4>Segurança do Trabalho</h4>
-            <p>Elaboração de PGR, LTCAT, PCMSO e laudos técnicos.</p>
+            <p>PGR, LTCAT, PCMSO e laudos técnicos.</p>
         </div>
 
         <div class="col-md-3">
             <h4>Medicina Ocupacional</h4>
-            <p>Exames admissionais, periódicos e demissionais.</p>
+            <p>Exames admissionais e periódicos.</p>
         </div>
 
         <div class="col-md-3">
             <h4>Gestão de RH</h4>
-            <p>Recrutamento, seleção e administração de pessoal.</p>
+            <p>Recrutamento e administração de pessoal.</p>
         </div>
 
         <div class="col-md-3">
             <h4>Treinamentos</h4>
-            <p>Capacitações obrigatórias conforme normas regulamentadoras.</p>
+            <p>Capacitações conforme normas NR.</p>
         </div>
     </div>
 </div>
 
 <!-- Blog -->
-<div class="container py-5 bg-light">
-    <h4 class="text-primary text-center">Conteúdo</h4>
-    <h1 class="text-center">Atualizações e dicas</h1>
-
-    <p class="text-center">Fique por dentro das normas de segurança e tendências em gestão de pessoas.</p>
+<div class="container-fluid bg-light py-5">
+    <div class="container text-center">
+        <h4 class="text-primary">Conteúdo</h4>
+        <h1>Atualizações e Dicas</h1>
+        <p>Informações sobre segurança do trabalho e gestão de pessoas.</p>
+    </div>
 </div>
 
 <!-- Team -->
-<div class="container py-5">
-    <h4 class="text-primary text-center">Equipe</h4>
-    <h1 class="text-center">Profissionais qualificados</h1>
-    <p class="text-center">Nossa equipe é formada por especialistas em SST e RH prontos para atender sua empresa.</p>
+<div class="container py-5 text-center">
+    <h4 class="text-primary">Equipe</h4>
+    <h1>Profissionais Especializados</h1>
+    <p>Equipe qualificada pronta para atender sua empresa.</p>
 </div>
 
 <!-- Footer -->
-<div class="container-fluid footer bg-dark text-white py-5">
+<div class="container-fluid footer py-5">
     <div class="container">
-        <h3>SST & RH</h3>
-        <p>Soluções completas em Segurança do Trabalho e Recursos Humanos.</p>
+        <h3 class="text-white">SST & RH Solutions</h3>
+        <p class="text-white">Soluções completas em Segurança do Trabalho e Recursos Humanos.</p>
 
-        <p><i class="fas fa-map-marker-alt"></i> Atendimento nacional</p>
-        <p><i class="fas fa-envelope"></i> contato@empresa.com</p>
-        <p><i class="fa fa-phone-alt"></i> (00) 0000-0000</p>
+        <p class="text-white"><i class="fas fa-map-marker-alt"></i> Atendimento nacional</p>
+        <p class="text-white"><i class="fas fa-envelope"></i> contato@empresa.com</p>
+        <p class="text-white"><i class="fa fa-phone-alt"></i> (00) 0000-0000</p>
     </div>
 </div>
 
 <!-- Copyright -->
-<div class="container-fluid bg-secondary text-white text-center py-3">
-    © <script>document.write(new Date().getFullYear())</script> SST & RH - Todos os direitos reservados
+<div class="container-fluid copyright py-4 text-center">
+    © <script>document.write(new Date().getFullYear())</script> SST & RH Solutions - Todos os direitos reservados
 </div>
 
 <script src="js/main.js"></script>
+
 </body>
 </html>
