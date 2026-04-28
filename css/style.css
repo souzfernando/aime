@@ -717,3 +717,15 @@
 /*** copyright end ***/
 
 
+/* remove qualquer efeito de hover no título */
+.service .service-content .service-content-inner .h4 {
+    color: inherit;
+    text-decoration: none;
+    cursor: default;
+}
+
+/* impede mudança de cor ao passar o mouse */
+.service .service-item:hover .service-content .service-content-inner .h4,
+.service .service-content .service-content-inner .h4:hover {
+    color: inherit !important;
+}
